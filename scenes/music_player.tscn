@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c3p1yh3qx832"]
+
+[ext_resource type="AudioStream" uid="uid://d2iae8mcat1aq" path="res://assets/music/BGM 5 D Folk loop.ogg" id="1_jxdhu"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer3D" unique_id=852679144]
+stream = ExtResource("1_jxdhu")
+autoplay = true
+parameters/looping = true

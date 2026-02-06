@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d2iae8mcat1aq"
+path="res://.godot/imported/BGM 5 D Folk loop.ogg-34154bdb04faf0a2aff1ef7082b3cdcc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/BGM 5 D Folk loop.ogg"
+dest_files=["res://.godot/imported/BGM 5 D Folk loop.ogg-34154bdb04faf0a2aff1ef7082b3cdcc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

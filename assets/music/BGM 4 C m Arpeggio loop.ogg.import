@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://pxd4vmfy4awn"
+path="res://.godot/imported/BGM 4 C m Arpeggio loop.ogg-67ad511a89cc4a4b6e12aae7cf1249ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/music/BGM 4 C m Arpeggio loop.ogg"
+dest_files=["res://.godot/imported/BGM 4 C m Arpeggio loop.ogg-67ad511a89cc4a4b6e12aae7cf1249ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
