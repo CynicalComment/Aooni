@@ -24,7 +24,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("sprint"):
 		velocity.x = velocity.x * 1.5
 		velocity.z = velocity.z * 1.5
-		#checkinggithub
+		#checkinggithub please do something
 		
 		
 	move_and_slide()
