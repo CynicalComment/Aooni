@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var sensitivity = 1
+@export var sensitivity = .6
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:

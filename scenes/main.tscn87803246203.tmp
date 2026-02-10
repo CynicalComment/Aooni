@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://cwynysfl7a2uk" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://d4ngol6nbp3er" path="res://assets/- Classic 64 Asset Pack 0.6/Buildings/textures/brick_red_04.jpg" id="3_tefeu"]
+[ext_resource type="FontFile" uid="uid://c1sw304oj8i28" path="res://ui/Trajan Pro Regular.ttf" id="4_tbgi4"]
+[ext_resource type="Script" uid="uid://sm645y28l13f" path="res://scripts/score_label.gd" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dv4vcxg6ypso1" path="res://assets/- Classic 64 Asset Pack 0.6/Buildings/building_01.blend" id="6_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://djh6vxppc3137" path="res://assets/- Classic 64 Asset Pack 0.6/Buildings/shed_01.blend" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://xionfi4b4lo1" path="res://assets/- Classic 64 Asset Pack 0.6/Boxes/box_01.blend" id="8_tipki"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wfyh"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tipki"]
+albedo_texture = ExtResource("3_tefeu")
+uv1_scale = Vector3(50.535, 50.535, 50.535)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sugp2"]
+lightmap_size_hint = Vector2i(604, 326)
+material = SubResource("StandardMaterial3D_tipki")
+size = Vector3(60, 2, 60)
+
+[sub_resource type="Theme" id="Theme_o6xl0"]
+default_font = ExtResource("4_tbgi4")
+
+[node name="Main" type="Node3D" unique_id=1281093909]
+script = ExtResource("1_sugp2")
+
+[node name="Player" parent="." unique_id=2113815111 instance=ExtResource("1_o5qli")]
+process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3227459, 0)
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1732930811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1066981466]
+shape = SubResource("BoxShape3D_0wfyh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1986304551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.400442, 0)
+mesh = SubResource("BoxMesh_sugp2")
+
+[node name="SunLight" type="DirectionalLight3D" parent="." unique_id=1331432600]
+transform = Transform3D(1, 0, 0, 0, -0.9659258, 0.25881907, 0, -0.25881907, -0.9659258, 0, 7, 0)
+shadow_enabled = true
+
+[node name="UserInterface" type="Control" parent="." unique_id=470751415]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -70.0
+offset_right = -16.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_o6xl0")
+
+[node name="ScoreLabel" type="Label" parent="UserInterface" unique_id=358129886]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 24.0
+offset_right = 90.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Score: 0"
+script = ExtResource("5_tefeu")
+
+[node name="Retry" type="ColorRect" parent="UserInterface" unique_id=934599873]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="UserInterface/Retry" unique_id=1692774555]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -8.0
+offset_right = 93.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Enter to retry"
+
+[node name="MainMenuButtons" type="PanelContainer" parent="UserInterface" unique_id=134053980]
+process_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10963542
+anchor_top = 0.35092592
+anchor_right = 0.30703124
+anchor_bottom = 0.7537037
+offset_left = -79.5
+offset_top = -26.0
+offset_right = 79.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/MainMenuButtons" unique_id=755645914]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="UserInterface/MainMenuButtons/VBoxContainer" unique_id=702912767]
+layout_mode = 2
+text = "AWHHHHHHHH"
+alignment = 0
+
+[node name="Button2" type="Button" parent="UserInterface/MainMenuButtons/VBoxContainer" unique_id=68764098]
+layout_mode = 2
+text = "AHHHHHHH"
+
+[node name="Close" type="Button" parent="UserInterface/MainMenuButtons/VBoxContainer" unique_id=1573855107]
+layout_mode = 2
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=261823312]
+
+[node name="building_012" parent="." unique_id=1877833872 instance=ExtResource("6_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.623516, 1.2050549, -0.90341115)
+
+[node name="shed_01" parent="." unique_id=679766908 instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.800938, 0, 0)
+
+[node name="box_01" parent="." unique_id=683009516 instance=ExtResource("8_tipki")]
+transform = Transform3D(6.9584284, 0, 0, 0, 6.9584284, 0, 0, 0, 6.9584284, 6.521772, 0.928251, -3.6685114)
+
+[connection signal="pressed" from="UserInterface/MainMenuButtons/VBoxContainer/Button" to="." method="_on_button_pressed"]

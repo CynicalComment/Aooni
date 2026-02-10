@@ -25,7 +25,12 @@ func _physics_process(delta):
 		velocity.x = velocity.x * 1.5
 		velocity.z = velocity.z * 1.5
 		#checkinggithub please do something
-		
+	if Input.is_action_pressed("crouch"):
+		scale = Vector3(1,0.5,1)
+	if Input.is_action_just_released("crouch"):
+		scale = Vector3(1,1,1)
+	if Input.is_action_just_pressed("toggle_flashlight"):
+		$Head/Flashlight.visible = !$Head/Flashlight.visible
 		
 	move_and_slide()
 		

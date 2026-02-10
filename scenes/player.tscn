@@ -18,7 +18,7 @@ script = ExtResource("1_g2els")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1477643939]
 shape = SubResource("CapsuleShape3D_3vyb7")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1188758638]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1188758638]
 mesh = SubResource("CapsuleMesh_g2els")
 surface_material_override/0 = SubResource("StandardMaterial3D_dqkch")
 
@@ -27,3 +27,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81827354, 0)
 script = ExtResource("2_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=2135501034]
+
+[node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=2128439450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050967813, 0)
+light_color = Color(0.9019608, 0.87058824, 0.6627451, 1)
+spot_range = 4.482
+spot_attenuation = -3.26
+spot_angle = 16.65376
+spot_angle_attenuation = 3.6050012
