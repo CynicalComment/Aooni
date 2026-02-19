@@ -3,26 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cwynysfl7a2uk" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://d4ngol6nbp3er" path="res://assets/- Classic 64 Asset Pack 0.6/Buildings/textures/brick_red_04.jpg" id="3_tefeu"]
-[ext_resource type="FontFile" uid="uid://c1sw304oj8i28" path="res://ui/Trajan Pro Regular.ttf" id="4_tbgi4"]
-[ext_resource type="Script" uid="uid://sm645y28l13f" path="res://scripts/score_label.gd" id="5_tefeu"]
-[ext_resource type="Texture2D" uid="uid://dvutgvhn2hft0" path="res://ui/CrosshairTexture.png" id="6_85g3d"]
-[ext_resource type="PackedScene" uid="uid://dv4vcxg6ypso1" path="res://assets/- Classic 64 Asset Pack 0.6/Buildings/building_01.blend" id="6_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://xionfi4b4lo1" path="res://assets/- Classic 64 Asset Pack 0.6/Boxes/box_01.blend" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://cegdluatjc7he" path="res://scenes/user_interface.tscn" id="4_o6xl0"]
+[ext_resource type="Resource" uid="uid://dhr4u37d006kx" path="res://inventory/PlayerInventory.tres" id="4_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://dbgceayw5477n" path="res://scenes/door.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bq6aalf0g6x1k" path="res://scenes/light_switch.tscn" id="8_choun"]
 [ext_resource type="Texture2D" uid="uid://38qph5cye5vy" path="res://assets/- Classic 64 Asset Pack 0.6/Concrete/Materials/concrete_floor_06.jpg" id="9_85g3d"]
-
-[sub_resource type="Sky" id="Sky_85g3d"]
-
-[sub_resource type="Environment" id="Environment_ya4ey"]
-background_mode = 1
-background_color = Color(0.10724526, 0.14160013, 0.16042867, 1)
-sky = SubResource("Sky_85g3d")
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.03
-volumetric_fog_albedo = Color(0.2885953, 0.13485986, 0.06850833, 1)
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_eb6dy"]
-
-[sub_resource type="Compositor" id="Compositor_trceg"]
+[ext_resource type="PackedScene" uid="uid://dvjaew0rx5n4t" path="res://scenes/button.tscn" id="9_ya4ey"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0wfyh"]
 size = Vector3(60, 1.6143799, 60)
@@ -35,19 +21,6 @@ uv1_scale = Vector3(50.535, 50.535, 50.535)
 lightmap_size_hint = Vector2i(604, 326)
 material = SubResource("StandardMaterial3D_tipki")
 size = Vector3(60, 2, 60)
-
-[sub_resource type="Theme" id="Theme_o6xl0"]
-default_font = ExtResource("4_tbgi4")
-
-[sub_resource type="LabelSettings" id="LabelSettings_85g3d"]
-font_size = 54
-font_color = Color(0.5101585, 0.028430268, 0.08829234, 1)
-outline_size = 5
-outline_color = Color(0.20470247, 0.009617366, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_choun"]
-font_size = 86
-font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_85g3d"]
 size = Vector3(5, 7, 1)
@@ -68,21 +41,23 @@ size = Vector3(20, 20, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_ya4ey"]
 size = Vector3(20, 20, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
+
+[sub_resource type="Environment" id="Environment_85g3d"]
+background_mode = 1
+background_color = Color(0.00091255904, 0, 0.087876715, 1)
+volumetric_fog_enabled = true
+
 [node name="Main" type="Node3D" unique_id=1281093909]
 process_mode = 3
 script = ExtResource("1_sugp2")
 
-[node name="Environment" type="Node" parent="." unique_id=203829377]
+[node name="Player" parent="." unique_id=2113815111 instance=ExtResource("1_o5qli")]
+process_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3227459, 0)
+inv = ExtResource("4_ya4ey")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=216715961]
-environment = SubResource("Environment_ya4ey")
-camera_attributes = SubResource("CameraAttributesPractical_eb6dy")
-compositor = SubResource("Compositor_trceg")
-
-[node name="SunLight" type="DirectionalLight3D" parent="Environment" unique_id=1331432600]
-transform = Transform3D(1, 0, 0, 0, -0.95893866, -0.28361362, 0, 0.28361362, -0.95893866, 0, 7, 0)
-visible = false
-shadow_enabled = true
+[node name="UserInterface" parent="." unique_id=537759978 instance=ExtResource("4_o6xl0")]
 
 [node name="Ground" type="StaticBody3D" parent="." unique_id=1732930811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -97,163 +72,9 @@ shape = SubResource("BoxShape3D_0wfyh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.400442, 0)
 mesh = SubResource("BoxMesh_sugp2")
 
-[node name="Player" parent="." unique_id=2113815111 instance=ExtResource("1_o5qli")]
-process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3227459, 0)
-
-[node name="UserInterface" type="Control" parent="." unique_id=470751415]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_o6xl0")
-
-[node name="ScoreLabel" type="Label" parent="UserInterface" unique_id=358129886]
-visible = false
-layout_mode = 0
-offset_left = 29.0
-offset_top = 24.0
-offset_right = 90.0
-offset_bottom = 47.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Score: 0"
-script = ExtResource("5_tefeu")
-
-[node name="TextureRect" type="TextureRect" parent="UserInterface" unique_id=849929756]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48958334
-anchor_top = 0.4814815
-anchor_right = 0.5104167
-anchor_bottom = 0.5185185
-offset_right = -6.1035156e-05
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_85g3d")
-metadata/_edit_use_anchors_ = true
-
-[node name="Retry" type="ColorRect" parent="UserInterface" unique_id=934599873]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="UserInterface/Retry" unique_id=1692774555]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -8.0
-offset_right = 93.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Press Enter to retry"
-
-[node name="MainMenu" type="Control" parent="UserInterface" unique_id=494684568]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Opacity" type="ColorRect" parent="UserInterface/MainMenu" unique_id=78403272]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.53333336)
-
-[node name="MainMenuButtons" type="PanelContainer" parent="UserInterface/MainMenu" unique_id=134053980]
-process_mode = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.066
-anchor_top = 0.24366666
-anchor_right = 0.328
-anchor_bottom = 0.6267778
-offset_left = -0.7200012
-offset_top = -0.16000366
-offset_right = 0.23999023
-offset_bottom = 0.079956055
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/MainMenu/MainMenuButtons" unique_id=755645914]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="UserInterface/MainMenu/MainMenuButtons/VBoxContainer" unique_id=2003869065]
-layout_mode = 2
-size_flags_vertical = 3
-text = "CONCRETE WALL"
-label_settings = SubResource("LabelSettings_85g3d")
-vertical_alignment = 1
-
-[node name="StartGame" type="Button" parent="UserInterface/MainMenu/MainMenuButtons/VBoxContainer" unique_id=702912767]
-layout_mode = 2
-size_flags_vertical = 3
-text = "RESUME"
-
-[node name="Settings" type="Button" parent="UserInterface/MainMenu/MainMenuButtons/VBoxContainer" unique_id=68764098]
-layout_mode = 2
-size_flags_vertical = 3
-text = "SETTINGS
-(does nothing)"
-
-[node name="ExitGame" type="Button" parent="UserInterface/MainMenu/MainMenuButtons/VBoxContainer" unique_id=1573855107]
-layout_mode = 2
-size_flags_vertical = 3
-text = "QUIT"
-
-[node name="Inventory" type="ColorRect" parent="UserInterface" unique_id=765005756]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="UserInterface/Inventory" unique_id=1408449112]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -869.5
-offset_top = -88.5
-offset_right = 869.5
-offset_bottom = 88.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "PRETEND IM AN INVENTORY YAAAAY
-"
-label_settings = SubResource("LabelSettings_choun")
+[node name="Environment" type="Node" parent="." unique_id=203829377]
 
 [node name="RandomAssets" type="Node" parent="." unique_id=138058367]
-
-[node name="building_012" parent="RandomAssets" unique_id=1877833872 instance=ExtResource("6_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.623516, 1.2050549, -0.90341115)
-
-[node name="box_01" parent="RandomAssets" unique_id=683009516 instance=ExtResource("8_tipki")]
-transform = Transform3D(6.9584284, 0, 0, 0, 6.9584284, 0, 0, 0, 6.9584284, 6.521772, 0.928251, -3.6685114)
-
-[node name="box_02" parent="RandomAssets" unique_id=1725848910 instance=ExtResource("8_tipki")]
-transform = Transform3D(38.902805, 0, 0, 0, 6.9584284, 0, 0, 0, 67.621124, 6.521772, 28.440256, -3.6685114)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RandomAssets" unique_id=404965537]
 transform = Transform3D(1, 0, 0, 0, 0.57916737, -0.8152087, 0, 0.8152087, 0.57916737, 0, 1.3800058, 10.500896)
@@ -365,10 +186,80 @@ shape = SubResource("BoxShape3D_choun")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RandomAssets/StaticBody3D6/CollisionShape3D" unique_id=2049522279]
 mesh = SubResource("BoxMesh_ya4ey")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1575767134]
+[node name="CSGBox3D" type="CSGBox3D" parent="RandomAssets" unique_id=12304552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1509762, 2.8867798, -20.025166)
+cast_shadow = 2
+use_collision = true
+flip_faces = true
+size = Vector3(15.84137, 6.7735596, 14.67041)
+material = SubResource("StandardMaterial3D_ya4ey")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="RandomAssets/CSGBox3D" unique_id=222537244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4083557, 0.14289999, 7.2406273)
+size = Vector3(4.788513, 6.533081, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="RandomAssets/CSGBox3D" unique_id=1487141194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2517252, 0.14289999, 7.2406273)
+size = Vector3(8.742401, 6.533081, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="RandomAssets/CSGBox3D" unique_id=2093139110]
+transform = Transform3D(0.86602545, 5.856215e-09, 0.49999997, 0.49999997, -2.1855692e-08, -0.86602545, 5.856215e-09, 1, -2.1855692e-08, -5.2513437, 5.250849, -1.8455353)
+size = Vector3(14.654892, 20.55246, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="RandomAssets/CSGBox3D" unique_id=22024101]
+transform = Transform3D(-0.86602545, 8.156656e-08, -0.49999997, 0.49999997, -2.1855692e-08, -0.86602545, -8.156656e-08, -1, -2.1855692e-08, 7.1343994, 5.250849, -1.8455353)
+size = Vector3(14.654892, 20.55246, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="RandomAssets/CSGBox3D" unique_id=638147856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0265656, 3.968316, 7.2406273)
+size = Vector3(1.9722214, 8.045807, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="RandomAssets/CSGBox3D" unique_id=1944127884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75484633, 5.6843576, 7.2406273)
+size = Vector3(3.7118053, 4.6137238, 1)
+
+[node name="Lights" type="Node" parent="." unique_id=1480843725]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1575767134]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.801672, 6.2196183, 0)
+visible = false
 spot_range = 8.405
 spot_attenuation = -2.0
 
-[connection signal="pressed" from="UserInterface/MainMenu/MainMenuButtons/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
-[connection signal="pressed" from="UserInterface/MainMenu/MainMenuButtons/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+[node name="light_switch" parent="Lights" unique_id=604630940 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.644106, 5.8019514, -15.403022)
+
+[node name="light_switch3" parent="Lights" unique_id=9226982 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.644106, 5.8019514, -4.7518015)
+
+[node name="light_switch4" parent="Lights" unique_id=11254469 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.644106, 5.8019514, 6.009983)
+
+[node name="light_switch5" parent="Lights" unique_id=860136280 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.644106, 5.8019514, 16.081654)
+
+[node name="light_switch6" parent="Lights" unique_id=2033647261 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8790913, 5.8019514, 16.081654)
+
+[node name="light_switch7" parent="Lights" unique_id=1535160179 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8790913, 5.8019514, 4.037877)
+
+[node name="light_switch8" parent="Lights" unique_id=561448179 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8790913, 5.8019514, -6.0893364)
+
+[node name="light_switch2" parent="Lights" unique_id=792217188 instance=ExtResource("8_choun")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5935917, 5.803242, -23.436605)
+
+[node name="Button" parent="." unique_id=528319614 instance=ExtResource("9_ya4ey")]
+transform = Transform3D(0.5708451, 0, 0, 0, 0.5657108, 0, 0, 0, 0.34800673, -1.9375103, 1.0751185, -13.431897)
+collision_layer = 8
+collision_mask = 0
+prompt_message = "Toggle Light"
+
+[node name="Door" parent="." unique_id=1340230123 instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0029115677, 1.2522299, -12.897345)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1101573747]
+environment = SubResource("Environment_85g3d")
+
+[connection signal="interacted" from="Button" to="Lights/light_switch" method="toggle"]

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctj7cf752ao48"
-path="res://.godot/imported/godotman.glb-966a909c41f0dc8a6c7fe30d443cc53f.scn"
+path="res://.godot/imported/godotman.glb-e63f7d81b357a3fd182b066e0cdc37c4.scn"
 
 [deps]
 
-source_file="res://assets/godotman.glb"
-dest_files=["res://.godot/imported/godotman.glb-966a909c41f0dc8a6c7fe30d443cc53f.scn"]
+source_file="res://assets/- Classic 64 Asset Pack 0.6/godotman.glb"
+dest_files=["res://.godot/imported/godotman.glb-e63f7d81b357a3fd182b066e0cdc37c4.scn"]
 
 [params]
 

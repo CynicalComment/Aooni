@@ -2,23 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://olxjc1mj7p33"
-path="res://.godot/imported/Galumph_1.png-ab82021d7fa8b05c5207fe61823809dd.ctex"
+uid="uid://dmvlerni5wswx"
+path.s3tc="res://.godot/imported/Galumph_3.png-deba56d1e918d73f0422b15984803d0a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "7c09bf7ebcbe4a80f0def35f3a54e1bc"
+"md5": "4b4202ea7848acb30dff2dafae626ca7"
 }
 
 [deps]
 
-source_file="res://assets/Galumph_1.png"
-dest_files=["res://.godot/imported/Galumph_1.png-ab82021d7fa8b05c5207fe61823809dd.ctex"]
+source_file="res://assets/- Classic 64 Asset Pack 0.6/Galumph_3.png"
+dest_files=["res://.godot/imported/Galumph_3.png-deba56d1e918d73f0422b15984803d0a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

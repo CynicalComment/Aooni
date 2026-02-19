@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://cegdluatjc7he"]
+
+[ext_resource type="FontFile" uid="uid://c1sw304oj8i28" path="res://ui/Trajan Pro Regular.ttf" id="1_l2bgj"]
+[ext_resource type="Script" uid="uid://cl8j0w3pv7fow" path="res://scripts/user_interface.gd" id="2_jbsfc"]
+[ext_resource type="Texture2D" uid="uid://dvutgvhn2hft0" path="res://ui/CrosshairTexture.png" id="2_y1h3b"]
+
+[sub_resource type="Theme" id="Theme_o6xl0"]
+default_font = ExtResource("1_l2bgj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_85g3d"]
+font_size = 54
+font_color = Color(0.5101585, 0.028430268, 0.08829234, 1)
+outline_size = 5
+outline_color = Color(0.20470247, 0.009617366, 0, 1)
+
+[node name="UserInterface" type="Control" unique_id=537759978]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_o6xl0")
+script = ExtResource("2_jbsfc")
+
+[node name="Crosshair" type="TextureRect" parent="." unique_id=926307843]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48958334
+anchor_top = 0.4814815
+anchor_right = 0.5104167
+anchor_bottom = 0.5185185
+offset_right = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_y1h3b")
+metadata/_edit_use_anchors_ = true
+
+[node name="Retry" type="ColorRect" parent="." unique_id=281274457]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Retry" unique_id=136379057]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -8.0
+offset_right = 93.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Enter to retry"
+
+[node name="MainMenu" type="Control" parent="." unique_id=1660842003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Opacity" type="ColorRect" parent="MainMenu" unique_id=282502601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.53333336)
+
+[node name="MainMenuButtons" type="PanelContainer" parent="MainMenu" unique_id=938862913]
+process_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.24366666
+anchor_right = 0.328
+anchor_bottom = 0.6267778
+offset_left = -0.7200012
+offset_top = -0.16000366
+offset_right = 0.23999023
+offset_bottom = 0.079956055
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/MainMenuButtons" unique_id=829469640]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainMenu/MainMenuButtons/VBoxContainer" unique_id=1865954117]
+layout_mode = 2
+size_flags_vertical = 3
+text = "CONCRETE WALL"
+label_settings = SubResource("LabelSettings_85g3d")
+vertical_alignment = 1
+
+[node name="StartGame" type="Button" parent="MainMenu/MainMenuButtons/VBoxContainer" unique_id=270565084]
+layout_mode = 2
+size_flags_vertical = 3
+text = "RESUME"
+
+[node name="Settings" type="Button" parent="MainMenu/MainMenuButtons/VBoxContainer" unique_id=1259714178]
+layout_mode = 2
+size_flags_vertical = 3
+text = "SETTINGS
+(does nothing)"
+
+[node name="ExitGame" type="Button" parent="MainMenu/MainMenuButtons/VBoxContainer" unique_id=667713274]
+layout_mode = 2
+size_flags_vertical = 3
+text = "QUIT"
+
+[connection signal="pressed" from="MainMenu/MainMenuButtons/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MainMenu/MainMenuButtons/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu/MainMenuButtons/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

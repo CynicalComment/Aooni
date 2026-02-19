@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://byxhvo214vdps"
-path="res://.godot/imported/Galumph.glb-86b77ebda9fb9dbdddf0c543a2eaeef2.scn"
+path="res://.godot/imported/Galumph.glb-f27ebb1598cb12ef486f24137dfd6618.scn"
 
 [deps]
 
-source_file="res://assets/Galumph.glb"
-dest_files=["res://.godot/imported/Galumph.glb-86b77ebda9fb9dbdddf0c543a2eaeef2.scn"]
+source_file="res://assets/- Classic 64 Asset Pack 0.6/Galumph.glb"
+dest_files=["res://.godot/imported/Galumph.glb-f27ebb1598cb12ef486f24137dfd6618.scn"]
 
 [params]
 

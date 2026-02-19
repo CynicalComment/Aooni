@@ -4,6 +4,8 @@ const SPEED = 5.0
 
 const JUMP_VELOCITY = 4.5
 
+@export var inv: Inv
+
 func _physics_process(delta):
 	
 	if not is_on_floor():
@@ -26,11 +28,13 @@ func _physics_process(delta):
 		velocity.z = velocity.z * 1.5
 		#checkinggithub please do something
 	if Input.is_action_pressed("crouch"):
-		scale = Vector3(1,0.5,1)
+		scale = Vector3(.8333,.8333,.8333)
 	if Input.is_action_just_released("crouch"):
 		scale = Vector3(1,1,1)
 	if Input.is_action_just_pressed("toggle_flashlight"):
 		$Head/Flashlight.visible = !$Head/Flashlight.visible
+ 
+		
 		
 	move_and_slide()
 		

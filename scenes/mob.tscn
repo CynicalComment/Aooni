@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccnapq035u6kv"]
 
 [ext_resource type="Script" uid="uid://ng5eqxc71apq" path="res://scripts/mob.gd" id="1_bsing"]
-[ext_resource type="PackedScene" uid="uid://byxhvo214vdps" path="res://assets/Galumph.glb" id="2_d4cuo"]
+[ext_resource type="PackedScene" uid="uid://byxhvo214vdps" path="res://assets/- Classic 64 Asset Pack 0.6/Galumph.glb" id="2_d4cuo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_71rcx"]
 radius = 0.32666016

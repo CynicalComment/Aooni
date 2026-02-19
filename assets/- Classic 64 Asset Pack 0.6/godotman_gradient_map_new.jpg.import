@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwjbem1q4wk6d"
-path.s3tc="res://.godot/imported/godotman_gradient_map_new.jpg-1468c208e56ce8e0394e06dd6de84699.s3tc.ctex"
+path.s3tc="res://.godot/imported/godotman_gradient_map_new.jpg-145f51e70c42ccf0e6634d82a97a9e0b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/godotman_gradient_map_new.jpg"
-dest_files=["res://.godot/imported/godotman_gradient_map_new.jpg-1468c208e56ce8e0394e06dd6de84699.s3tc.ctex"]
+source_file="res://assets/- Classic 64 Asset Pack 0.6/godotman_gradient_map_new.jpg"
+dest_files=["res://.godot/imported/godotman_gradient_map_new.jpg-145f51e70c42ccf0e6634d82a97a9e0b.s3tc.ctex"]
 
 [params]
 

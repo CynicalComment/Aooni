@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://b0xvsl0lkph0c"]
+
+[ext_resource type="Script" uid="uid://c8ajra6wwd7l5" path="res://inventory/inv_ui.gd" id="1_f2u1w"]
+[ext_resource type="Texture2D" uid="uid://bb2ml5imf7w71" path="res://inventory/item_art/InventoryBackground.png" id="2_w82yi"]
+[ext_resource type="PackedScene" uid="uid://d5orio38mmqe" path="res://inventory/inv_ui_slot.tscn" id="3_dn3an"]
+
+[node name="Inv_UI" type="Control" unique_id=61950315]
+custom_minimum_size = Vector2(156, 117)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 156.0
+offset_bottom = 117.0
+script = ExtResource("1_f2u1w")
+
+[node name="InventoryBackground" type="NinePatchRect" parent="." unique_id=989189706]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.92300004
+anchor_bottom = 0.92300004
+offset_right = 0.011993408
+offset_bottom = 0.008995056
+texture = ExtResource("2_w82yi")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="InventoryBackground" unique_id=916161671]
+layout_mode = 1
+offset_right = 140.0
+offset_bottom = 104.0
+columns = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="inv_UI_slot1" parent="InventoryBackground/GridContainer" unique_id=661209393 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot2" parent="InventoryBackground/GridContainer" unique_id=1526904692 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot3" parent="InventoryBackground/GridContainer" unique_id=2104672387 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot4" parent="InventoryBackground/GridContainer" unique_id=684888253 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot5" parent="InventoryBackground/GridContainer" unique_id=113884956 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot6" parent="InventoryBackground/GridContainer" unique_id=1164032423 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot7" parent="InventoryBackground/GridContainer" unique_id=1521687954 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot8" parent="InventoryBackground/GridContainer" unique_id=1922503700 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot9" parent="InventoryBackground/GridContainer" unique_id=1072465257 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot10" parent="InventoryBackground/GridContainer" unique_id=714445888 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot11" parent="InventoryBackground/GridContainer" unique_id=296040141 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="inv_UI_slot12" parent="InventoryBackground/GridContainer" unique_id=1493225214 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

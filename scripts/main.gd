@@ -9,29 +9,20 @@ func _process(delta):
 	if Input.is_action_just_pressed("escape"):
 		#unpause game
 		if get_tree().paused:
-			print("YOUR FUCKING MOM")
+			print("Unpause")
 			get_tree().paused = false
 			$UserInterface/MainMenu.hide()
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		#pause game open menu
 		elif ! get_tree().paused :
 			get_tree().paused = true
-			print("O MY GOOOOD")
+			print("Pause")
 			$UserInterface/MainMenu.show()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if Input.is_action_just_pressed("inventory") and not get_tree().paused:
-		$UserInterface/Inventory.visible = ! $UserInterface/Inventory.visible
+	#Flip Flop inventory when game not paused
+	#Potential Game Over
 func _on_player_hit():
 	$UserInterface/Retry.show()
-	
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
 		get_tree().reload_current_scene()
-
-func _on_exit_game_pressed():
-	get_tree().quit()
-
-func _on_start_game_pressed():
-	$UserInterface/MainMenu.hide()
-	get_tree().paused = false
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

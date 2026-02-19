@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bq6aalf0g6x1k"]
+
+[ext_resource type="Script" uid="uid://clnfv82e5xtfv" path="res://scripts/light_switch.gd" id="1_ldygq"]
+
+[node name="light_switch" type="Node3D" unique_id=604630940]
+script = ExtResource("1_ldygq")
+
+[node name="LightBulb" type="SpotLight3D" parent="." unique_id=1824055932]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0.35671738, 0.34774068, 0, 1)
+light_energy = 2.433
+light_volumetric_fog_energy = 1.796
+spot_range = 9.582359
+spot_angle = 47.812496
