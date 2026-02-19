@@ -31,7 +31,8 @@ func _physics_process(delta):
 		scale = Vector3(1,1,1)
 	if Input.is_action_just_pressed("toggle_flashlight"):
 		$Head/Flashlight.visible = !$Head/Flashlight.visible
-		
+
+	
 	move_and_slide()
 		
 	

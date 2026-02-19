@@ -35,3 +35,8 @@ spot_range = 4.482
 spot_attenuation = -3.26
 spot_angle = 16.65376
 spot_angle_attenuation = 3.6050012
+
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=1402681290]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -5.855, 0)
+debug_shape_thickness = 5
