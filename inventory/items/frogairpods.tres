@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://c56r6s8n2yo2y"]
+
+[ext_resource type="Script" uid="uid://duxxiwl3swca6" path="res://inventory/inventory_item.gd" id="1_vm01v"]
+[ext_resource type="Texture2D" uid="uid://cpop4hbw6xws4" path="res://inventory/item_art/frogairpods.png" id="2_ubtyk"]
+
+[resource]
+script = ExtResource("1_vm01v")
+name = "FrogAirpods"
+texture = ExtResource("2_ubtyk")
+metadata/_custom_type_script = "uid://duxxiwl3swca6"

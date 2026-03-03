@@ -3,7 +3,15 @@
 [ext_resource type="Script" uid="uid://spsi08nwlq4" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://dsj8tyi0aqrt7" path="res://scripts/head.gd" id="2_g2els"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_qhqgy"]
+[ext_resource type="Script" uid="uid://ctvrrj3srh0r3" path="res://Inv_slot.gd" id="3_smehm"]
 [ext_resource type="PackedScene" uid="uid://b0xvsl0lkph0c" path="res://inventory/inv_ui.tscn" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://c8txltbygg3yq" path="res://assets/myArt/meowl.png" id="4_qlg0r"]
+[ext_resource type="Script" uid="uid://cw1cxd5h4vkgw" path="res://inventory/inventory.gd" id="5_jej6c"]
+[ext_resource type="AudioStream" uid="uid://d2iae8mcat1aq" path="res://assets/music/BGM 5 D Folk loop.ogg" id="6_tuyoq"]
+
+[sub_resource type="Resource" id="Resource_f1ej7"]
+script = ExtResource("5_jej6c")
+metadata/_custom_type_script = "uid://cw1cxd5h4vkgw"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
 
@@ -15,6 +23,7 @@ albedo_texture = ExtResource("2_qhqgy")
 [node name="Player" type="CharacterBody3D" unique_id=2113815111 groups=["interactible"]]
 collision_mask = 14
 script = ExtResource("1_g2els")
+inv = SubResource("Resource_f1ej7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1477643939]
 shape = SubResource("CapsuleShape3D_3vyb7")
@@ -32,7 +41,11 @@ script = ExtResource("2_g2els")
 [node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=2128439450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050967813, 0)
 light_color = Color(0.9019608, 0.87058824, 0.6627451, 1)
-spot_range = 4.482
+light_volumetric_fog_energy = 0.1
+light_projector = ExtResource("4_qlg0r")
+light_size = 1.402
+shadow_enabled = true
+spot_range = 10.0
 spot_attenuation = -3.26
 spot_angle = 16.65376
 spot_angle_attenuation = 3.6050012
@@ -72,6 +85,10 @@ anchor_right = 0.54300004
 anchor_bottom = 0.39000002
 offset_left = 0.7199707
 offset_top = 3.7599792
-offset_right = -4.5600586
-offset_bottom = -0.2000122
+offset_right = -62.06006
+offset_bottom = -31.700012
 scale = Vector2(2, 2)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1988666935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86924136, 0)
+stream = ExtResource("6_tuyoq")

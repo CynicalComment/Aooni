@@ -9,14 +9,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("escape"):
 		#unpause game
 		if get_tree().paused:
-			print("Unpause")
 			get_tree().paused = false
 			$UserInterface/MainMenu.hide()
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		#pause game open menu
 		elif ! get_tree().paused :
 			get_tree().paused = true
-			print("Pause")
 			$UserInterface/MainMenu.show()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	#Flip Flop inventory when game not paused

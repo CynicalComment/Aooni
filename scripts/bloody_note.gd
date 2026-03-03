@@ -1,8 +1,10 @@
 extends Interactible
 
-#QUICKY INVENTORY
 @export var item: InvItem
 var player = null
+
+
+
 
 func _on_interacted(body):
 	player = body
