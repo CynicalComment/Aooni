@@ -1,26 +1,17 @@
 extends Node3D
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	$UserInterface/MainMenu.show()
-	$UserInterface/Retry.hide()
-	get_tree().paused = true
+	GameState.set_state(GameState.MenuState.PAUSED)
+	MusicPlayer.play_ambient()
 
 func _process(delta):
 	if Input.is_action_just_pressed("escape"):
-		#unpause game
-		if get_tree().paused:
-			get_tree().paused = false
+		if GameState.current_state == GameState.MenuState.PAUSED:
+			GameState.pop_state()
+			print("BE BETTER")
 			$UserInterface/MainMenu.hide()
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		#pause game open menu
-		elif ! get_tree().paused :
-			get_tree().paused = true
+		else:
+			GameState.set_state(GameState.MenuState.PAUSED)
 			$UserInterface/MainMenu.show()
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	#Flip Flop inventory when game not paused
-	#Potential Game Over
-func _on_player_hit():
-	$UserInterface/Retry.show()
-func _unhandled_input(event):
-	if event.is_action_pressed("ui_accept") and $UserInterface/Retry.visible:
-		get_tree().reload_current_scene()

@@ -2,27 +2,38 @@
 
 [ext_resource type="Script" uid="uid://bhnwv0xuw2u8o" path="res://scripts/door.gd" id="1_hpvv5"]
 [ext_resource type="Resource" uid="uid://dt4cv0vonnwvb" path="res://inventory/items/BloodyNote.tres" id="2_uvdjg"]
+[ext_resource type="AudioStream" uid="uid://c6qge33jom1a5" path="res://assets/music/DoorOpenClose.mp3" id="3_83dcw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uvdjg"]
-size = Vector3(2, 3, 1)
+size = Vector3(2, 3, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hpvv5"]
 albedo_color = Color(0.24796048, 0.11489508, 6.016344e-08, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_83dcw"]
 material = SubResource("StandardMaterial3D_hpvv5")
-size = Vector3(2, 3, 1)
+size = Vector3(2, 3, 0.5)
 
-[node name="Door" type="StaticBody3D" unique_id=1094267016]
+[node name="DoorPivot" type="StaticBody3D" unique_id=1094267016]
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_hpvv5")
 item = ExtResource("2_uvdjg")
+open_angle = -90
+
+[node name="audio_open" type="AudioStreamPlayer3D" parent="." unique_id=937897365]
+stream = ExtResource("3_83dcw")
+
+[node name="audio_close" type="AudioStreamPlayer3D" parent="." unique_id=1445969340]
+stream = ExtResource("3_83dcw")
+pitch_scale = 0.9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=287463414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0)
 shape = SubResource("BoxShape3D_uvdjg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1273228011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0)
 mesh = SubResource("BoxMesh_83dcw")
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]

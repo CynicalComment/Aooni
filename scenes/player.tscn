@@ -5,22 +5,25 @@
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_qhqgy"]
 [ext_resource type="Script" uid="uid://ctvrrj3srh0r3" path="res://Inv_slot.gd" id="3_smehm"]
 [ext_resource type="PackedScene" uid="uid://b0xvsl0lkph0c" path="res://inventory/inv_ui.tscn" id="4_dqkch"]
-[ext_resource type="Texture2D" uid="uid://c8txltbygg3yq" path="res://assets/myArt/meowl.png" id="4_qlg0r"]
 [ext_resource type="Script" uid="uid://cw1cxd5h4vkgw" path="res://inventory/inventory.gd" id="5_jej6c"]
-[ext_resource type="AudioStream" uid="uid://d2iae8mcat1aq" path="res://assets/music/BGM 5 D Folk loop.ogg" id="6_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://cgaqcs1i3y3vf" path="res://assets/music/flashlight.mp3" id="7_ur7pv"]
+[ext_resource type="AudioStream" uid="uid://b02aem1uockth" path="res://assets/music/Floor/Steps_floor-001.ogg" id="8_y4r1p"]
+[ext_resource type="AudioStream" uid="uid://dj5eimw866lkn" path="res://assets/music/Floor/sfx-voice-breath9.mp3" id="9_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://dw1e01nwpnh2c" path="res://assets/myArt/losescreen1.jpg" id="10_y4r1p"]
 
 [sub_resource type="Resource" id="Resource_f1ej7"]
 script = ExtResource("5_jej6c")
 metadata/_custom_type_script = "uid://cw1cxd5h4vkgw"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
+radius = 0.8
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqkch"]
 albedo_texture = ExtResource("2_qhqgy")
 
-[node name="Player" type="CharacterBody3D" unique_id=2113815111 groups=["interactible"]]
+[node name="Player" type="CharacterBody3D" unique_id=2113815111 groups=["interactible", "player"]]
 collision_mask = 14
 script = ExtResource("1_g2els")
 inv = SubResource("Resource_f1ej7")
@@ -32,6 +35,15 @@ shape = SubResource("CapsuleShape3D_3vyb7")
 mesh = SubResource("CapsuleMesh_g2els")
 surface_material_override/0 = SubResource("StandardMaterial3D_dqkch")
 
+[node name="Area3D" type="Area3D" parent="." unique_id=1921515387]
+collision_layer = 2
+collision_mask = 3
+
+[node name="deathsphere" type="CollisionShape3D" parent="Area3D" unique_id=966709373]
+shape = SubResource("CapsuleShape3D_3vyb7")
+
+[node name="Inv_UI" parent="." unique_id=61950315 instance=ExtResource("4_dqkch")]
+
 [node name="Head" type="Node3D" parent="." unique_id=1036463668 groups=["interactible"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81827354, 0)
 script = ExtResource("2_g2els")
@@ -40,9 +52,10 @@ script = ExtResource("2_g2els")
 
 [node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=2128439450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050967813, 0)
+visible = false
 light_color = Color(0.9019608, 0.87058824, 0.6627451, 1)
+light_energy = 0.3
 light_volumetric_fog_energy = 0.1
-light_projector = ExtResource("4_qlg0r")
 light_size = 1.402
 shadow_enabled = true
 spot_range = 10.0
@@ -77,18 +90,34 @@ text = "Prompt
 [KEY]"
 horizontal_alignment = 1
 
-[node name="Inv_UI" parent="." unique_id=61950315 instance=ExtResource("4_dqkch")]
-anchors_preset = -1
-anchor_left = 0.45900002
-anchor_top = 0.27800003
-anchor_right = 0.54300004
-anchor_bottom = 0.39000002
-offset_left = 0.7199707
-offset_top = 3.7599792
-offset_right = -62.06006
-offset_bottom = -31.700012
-scale = Vector2(2, 2)
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1988666935]
+[node name="audio_flashlight" type="AudioStreamPlayer3D" parent="." unique_id=1988666935]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86924136, 0)
-stream = ExtResource("6_tuyoq")
+stream = ExtResource("7_ur7pv")
+
+[node name="audio_footsteps" type="AudioStreamPlayer3D" parent="." unique_id=306136527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86924136, 0)
+stream = ExtResource("8_y4r1p")
+
+[node name="audio_breath" type="AudioStreamPlayer3D" parent="." unique_id=456629252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86924136, 0)
+stream = ExtResource("9_ur7pv")
+
+[node name="losescreen" type="Control" parent="." unique_id=621285910]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="losescreen" unique_id=101090220]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_y4r1p")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

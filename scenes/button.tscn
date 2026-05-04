@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dvjaew0rx5n4t"]
 
 [ext_resource type="Script" uid="uid://docwj316qd21j" path="res://scripts/button.gd" id="1_mi6dp"]
+[ext_resource type="AudioStream" uid="uid://cgaqcs1i3y3vf" path="res://assets/music/flashlight.mp3" id="2_rhj8v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4pas"]
 albedo_color = Color(0.93333334, 0, 0, 1)
@@ -8,6 +9,14 @@ metallic = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mi6dp"]
 material = SubResource("StandardMaterial3D_n4pas")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3q610"]
+albedo_color = Color(0.5390663, 0.14694995, 0.2914671, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i7y4x"]
+material = SubResource("StandardMaterial3D_3q610")
+top_radius = 0.1
+height = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rhj8v"]
 
@@ -17,5 +26,12 @@ script = ExtResource("1_mi6dp")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=302718703]
 mesh = SubResource("BoxMesh_mi6dp")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1706111735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13657725, 0)
+mesh = SubResource("CylinderMesh_i7y4x")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=775065907]
 shape = SubResource("BoxShape3D_rhj8v")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1057081832]
+stream = ExtResource("2_rhj8v")

@@ -5,15 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://cegdluatjc7he" path="res://scenes/user_interface.tscn" id="4_o6xl0"]
 [ext_resource type="Resource" uid="uid://dhr4u37d006kx" path="res://inventory/PlayerInventory.tres" id="4_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://dyhx0w0o16ar3" path="res://assets/- Classic 64 Asset Pack 0.6/Walls/Materials/wall_halfconcrete_01.jpg" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://b4ja22l6748xr" path="res://scripts/enemy.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://b4ja22l6748xr" path="res://scenes/enemy.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dbgceayw5477n" path="res://scenes/door.tscn" id="7_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bq6aalf0g6x1k" path="res://scenes/light_switch.tscn" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://dvjaew0rx5n4t" path="res://scenes/button.tscn" id="9_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://dlb45l0xqyxqy" path="res://inventory/bloody_note.tscn" id="10_choun"]
 [ext_resource type="Resource" uid="uid://c56r6s8n2yo2y" path="res://inventory/items/frogairpods.tres" id="11_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://b8ilkgjn6bohu" path="res://assets/- Classic 64 Asset Pack 0.6/Roof/Materials/shingles_wood_02.jpg" id="12_trceg"]
+[ext_resource type="Texture2D" uid="uid://c6x5dau8j20m0" path="res://assets/- Classic 64 Asset Pack 0.6/Roof/Materials/shingles_02.jpg" id="13_a8y0u"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_tbgi4"]
-vertices = PackedVector3Array(-2.8964844, 0.68896484, -3.8325348, -0.8964844, 0.68896484, -3.8325348, -0.8964844, 0.68896484, -25.332535, -3.6464844, 0.68896484, -3.0825348, -28.646484, 0.68896484, -25.332535, -28.646484, 0.68896484, -1.0825348, -3.6464844, 0.68896484, -1.0825348, 10.603516, 0.68896484, -7.332535, 10.603516, 0.68896484, -5.332535, 13.603516, 0.68896484, -5.332535, 3.8535156, 0.68896484, -3.0825348, 3.8535156, 0.68896484, -1.0825348, 7.3535156, 0.68896484, -1.0825348, 9.853516, 0.68896484, -8.082535, 13.603516, 0.68896484, -14.582535, 3.1035156, 0.68896484, -3.8325348, 7.3535156, 0.68896484, -7.332535, 14.353516, 0.68896484, -15.332535, 15.103516, 0.68896484, -25.332535, 8.103516, 0.68896484, -8.082535, 15.103516, 0.68896484, -15.332535, 16.103516, 0.68896484, -15.332535, 16.853516, 0.68896484, -14.582535, 28.603516, 0.68896484, -13.332535, 28.603516, 0.68896484, -25.332535, 16.853516, 0.68896484, -13.082535, 16.103516, 0.68896484, 3.6674652, 15.353516, 0.68896484, 3.6674652, 15.353516, 0.68896484, 7.167465, 16.853516, 0.68896484, 2.9174652, 20.353516, 0.68896484, 6.917465, 21.103516, 0.68896484, 7.667465, 21.103516, 0.68896484, 8.667465, 28.603516, 0.68896484, 8.667465, 14.353516, 0.68896484, 3.6674652, 13.603516, 0.68896484, 2.9174652, 10.603516, 0.68896484, 2.9174652, 9.603516, 0.68896484, 3.6674652, 9.853516, 0.68896484, 7.667465, -1.6464844, 0.9889649, -1.8325348, -1.6464844, 0.9889649, 1.6674652, 1.8535156, 0.9889649, 1.6674652, 1.8535156, 0.9889649, -1.8325348, -28.646484, 0.68896484, 0.9174652, -3.6464844, 0.68896484, 0.9174652, 8.103516, 0.68896484, 3.6674652, 9.353516, 0.68896484, 8.167465, 3.8535156, 0.68896484, 2.9174652, 3.1035156, 0.68896484, 3.6674652, 9.603516, 0.68896484, 10.167465, 7.3535156, 0.68896484, 2.9174652, -1.3964844, 0.68896484, 3.6674652, -1.6464844, 0.68896484, 25.417465, 9.603516, 0.68896484, 25.417465, -2.8964844, 0.68896484, 3.6674652, -3.6464844, 0.68896484, 2.9174652, -28.646484, 0.68896484, 25.417465, 21.103516, 0.68896484, 9.417465, 20.353516, 0.68896484, 10.167465, 28.603516, 0.68896484, 25.417465, 10.103516, 0.68896484, 10.667465)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(3, 6, 5), PackedInt32Array(9, 8, 7), PackedInt32Array(12, 11, 10), PackedInt32Array(7, 13, 9), PackedInt32Array(9, 13, 14), PackedInt32Array(10, 15, 12), PackedInt32Array(12, 15, 16), PackedInt32Array(18, 17, 14), PackedInt32Array(15, 19, 16), PackedInt32Array(18, 20, 17), PackedInt32Array(14, 13, 19), PackedInt32Array(15, 1, 19), PackedInt32Array(19, 1, 14), PackedInt32Array(14, 1, 18), PackedInt32Array(18, 1, 2), PackedInt32Array(21, 20, 18), PackedInt32Array(21, 18, 22), PackedInt32Array(22, 18, 24), PackedInt32Array(22, 24, 23), PackedInt32Array(23, 25, 22), PackedInt32Array(28, 27, 26), PackedInt32Array(26, 29, 28), PackedInt32Array(28, 29, 30), PackedInt32Array(33, 32, 31), PackedInt32Array(30, 29, 31), PackedInt32Array(31, 29, 33), PackedInt32Array(33, 29, 25), PackedInt32Array(33, 25, 23), PackedInt32Array(34, 27, 28), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(37, 34, 38), PackedInt32Array(38, 34, 28), PackedInt32Array(36, 8, 35), PackedInt32Array(35, 8, 9), PackedInt32Array(42, 41, 39), PackedInt32Array(39, 41, 40), PackedInt32Array(5, 6, 43), PackedInt32Array(43, 6, 44), PackedInt32Array(38, 46, 37), PackedInt32Array(37, 46, 45), PackedInt32Array(50, 45, 47), PackedInt32Array(47, 45, 48), PackedInt32Array(48, 45, 46), PackedInt32Array(48, 46, 49), PackedInt32Array(47, 11, 50), PackedInt32Array(50, 11, 12), PackedInt32Array(48, 49, 51), PackedInt32Array(51, 49, 53), PackedInt32Array(51, 53, 52), PackedInt32Array(54, 51, 52), PackedInt32Array(54, 52, 55), PackedInt32Array(55, 52, 56), PackedInt32Array(55, 56, 43), PackedInt32Array(43, 44, 55), PackedInt32Array(57, 32, 33), PackedInt32Array(57, 33, 58), PackedInt32Array(58, 33, 59), PackedInt32Array(53, 49, 60), PackedInt32Array(60, 58, 53), PackedInt32Array(53, 58, 59)]
+vertices = PackedVector3Array(38.958263, 6.299, -12.082535, 39.708263, 6.299, -11.082535, 40.708263, 6.299, -11.082535, 40.708263, 6.299, -23.832535, 30.958263, 6.299, -23.582535, 30.958263, 6.299, -12.082535, -28.291737, 0.6989999, 21.667465, -28.791737, 0.6989999, 21.917465, -28.791737, 0.6989999, 25.417465, 15.458263, 0.6989999, 25.417465, 14.208263, 0.6989999, 5.417465, 13.958263, 0.6989999, 3.9174652, 15.458263, 0.6989999, 6.167465, 14.208263, 0.6989999, -23.582535, -28.291737, 0.6989999, -23.582535, 16.958263, 0.6989999, -18.582535, 18.208263, 0.6989999, -18.582535, 18.208263, 0.6989999, -19.332535, 19.458263, 0.6989999, -20.332535, 16.958263, 0.6989999, -23.332535, 20.958263, 0.6989999, -20.082535, 25.958263, 0.6989999, -18.582535, 25.958263, 0.6989999, -23.332535, 21.708263, 0.6989999, -19.332535, 21.708263, 0.6989999, -18.582535, 19.708263, 6.299, -9.332535, 19.958263, 6.299, -8.582535, 20.458263, 6.299, -9.082535, 20.458263, 6.299, -10.082535, 22.208263, 6.299, -9.082535, 16.958263, 6.299, -9.082535, 18.458263, 6.299, -9.332535, 17.708263, 6.299, -10.082535, 19.708263, 6.299, -12.082535, 20.458263, 6.299, -17.082535, 19.458263, 6.299, -17.082535, 18.458263, 6.299, -12.082535, 22.208263, 6.299, -11.332535, 20.458263, 6.299, -11.332535, 18.208263, 6.299, -18.082535, 18.208263, 6.299, -19.332535, 16.958263, 6.299, -23.332535, 17.708263, 6.299, -11.332535, 23.208263, 6.299, -12.082535, 21.458263, 6.299, -17.832535, 18.958263, 6.299, -20.082535, 20.208263, 6.299, -20.332535, 20.208263, 6.299, -23.332535, 21.708263, 6.299, -19.332535, 28.208263, 6.299, -18.332535, 27.958263, 6.299, -23.332535, 21.708263, 6.299, -18.332535, 19.458263, 0.6989999, -8.082535, 19.708263, 0.6989999, -8.082535, 20.458263, 0.6989999, -9.082535, 18.458263, 0.6989999, -9.332535, 22.208263, 0.6989999, -11.332535, 22.958263, 0.6989999, -12.082535, 19.458263, 0.6989999, -17.082535, 16.958263, 0.6989999, -9.082535, 22.208263, 0.6989999, -9.082535, 20.958263, 0.6989999, -17.332535, 25.958263, 0.6989999, -12.082535, 27.208263, 6.299, -12.082535, 28.208263, 6.299, -13.082535, 19.458263, 6.299, -8.332535, 16.958263, 6.299, 0.4174652, 17.208263, 6.299, 0.4174652, 18.458263, 6.299, -1.5825348, 18.708263, 6.299, -6.832535, 16.958263, 6.299, -6.832535, 19.708263, 6.299, -7.582535, 19.458263, 6.299, -7.582535, 20.708263, 6.299, -1.3325348, 22.208263, 6.299, -1.3325348, 22.208263, 6.299, -6.832535, 20.458263, 6.299, -6.832535, 24.958263, 0.6989999, 3.1674652, 28.708263, 0.6989999, 3.4174652, 28.708263, 0.6989999, -9.332535, 24.958263, 0.6989999, -9.332535, 18.708263, 0.6989999, -6.832535, 20.458263, 0.6989999, 0.9174652, 20.458263, 0.6989999, -6.832535, 22.208263, 0.6989999, 0.9174652, 22.208263, 0.6989999, -6.832535, 18.708263, 0.6989999, 1.1674652, 19.208263, 0.6989999, 1.9174652, 16.958263, 0.6989999, 1.1674652, 16.958263, 0.6989999, -6.832535, 21.458263, 6.299, -0.3325348, 17.458263, 6.299, 1.6674652, 16.958263, 6.299, 3.4174652, 22.208263, 6.299, 3.4174652, 21.458263, 6.299, 1.6674652, 20.208263, 6.299, 2.6674652, 18.458263, 6.299, 2.6674652, 24.958263, 0.6989999, 4.667465, 24.208263, 0.6989999, 5.417465, 28.708263, 0.6989999, 25.417465, 22.958263, 0.6989999, 5.417465, 22.208263, 0.6989999, 4.167465, 17.458263, 0.6989999, 4.417465, 16.208263, 0.6989999, 6.167465)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 6, 10), PackedInt32Array(10, 6, 11), PackedInt32Array(10, 12, 9), PackedInt32Array(13, 11, 14), PackedInt32Array(14, 11, 6), PackedInt32Array(17, 16, 15), PackedInt32Array(17, 15, 18), PackedInt32Array(18, 15, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 19), PackedInt32Array(21, 24, 23), PackedInt32Array(20, 18, 19), PackedInt32Array(21, 23, 20), PackedInt32Array(27, 26, 25), PackedInt32Array(25, 28, 27), PackedInt32Array(27, 28, 29), PackedInt32Array(32, 31, 30), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 36), PackedInt32Array(38, 37, 28), PackedInt32Array(28, 37, 29), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(41, 42, 30), PackedInt32Array(42, 32, 30), PackedInt32Array(38, 33, 37), PackedInt32Array(37, 33, 43), PackedInt32Array(43, 33, 34), PackedInt32Array(43, 34, 44), PackedInt32Array(47, 46, 45), PackedInt32Array(36, 42, 35), PackedInt32Array(35, 42, 39), PackedInt32Array(45, 40, 47), PackedInt32Array(47, 40, 41), PackedInt32Array(46, 47, 48), PackedInt32Array(48, 47, 50), PackedInt32Array(48, 50, 49), PackedInt32Array(49, 51, 48), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 55), PackedInt32Array(56, 55, 57), PackedInt32Array(57, 55, 59), PackedInt32Array(57, 59, 58), PackedInt32Array(58, 59, 15), PackedInt32Array(60, 54, 56), PackedInt32Array(56, 54, 55), PackedInt32Array(15, 16, 58), PackedInt32Array(58, 61, 57), PackedInt32Array(24, 21, 61), PackedInt32Array(61, 21, 57), PackedInt32Array(57, 21, 62), PackedInt32Array(63, 43, 64), PackedInt32Array(64, 43, 49), PackedInt32Array(49, 43, 44), PackedInt32Array(49, 44, 51), PackedInt32Array(26, 65, 25), PackedInt32Array(25, 65, 31), PackedInt32Array(67, 66, 68), PackedInt32Array(68, 66, 70), PackedInt32Array(68, 70, 69), PackedInt32Array(72, 65, 71), PackedInt32Array(71, 65, 26), PackedInt32Array(73, 68, 74), PackedInt32Array(74, 68, 76), PackedInt32Array(74, 76, 75), PackedInt32Array(71, 76, 72), PackedInt32Array(72, 76, 69), PackedInt32Array(69, 76, 68), PackedInt32Array(80, 79, 77), PackedInt32Array(77, 79, 78), PackedInt32Array(53, 83, 52), PackedInt32Array(52, 83, 81), PackedInt32Array(81, 83, 82), PackedInt32Array(83, 85, 82), PackedInt32Array(82, 85, 84), PackedInt32Array(82, 87, 86), PackedInt32Array(86, 88, 82), PackedInt32Array(82, 88, 81), PackedInt32Array(81, 88, 89), PackedInt32Array(90, 73, 74), PackedInt32Array(67, 91, 66), PackedInt32Array(66, 91, 92), PackedInt32Array(95, 94, 93), PackedInt32Array(92, 91, 96), PackedInt32Array(90, 74, 94), PackedInt32Array(94, 74, 93), PackedInt32Array(96, 95, 92), PackedInt32Array(92, 95, 93), PackedInt32Array(97, 77, 78), PackedInt32Array(97, 78, 98), PackedInt32Array(98, 78, 99), PackedInt32Array(101, 100, 102), PackedInt32Array(102, 100, 103), PackedInt32Array(9, 12, 103), PackedInt32Array(100, 98, 103), PackedInt32Array(103, 98, 9), PackedInt32Array(9, 98, 99)]
 cell_height = 0.1
 agent_radius = 1.0
 
@@ -25,11 +28,35 @@ albedo_texture = ExtResource("5_tbgi4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tipki"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ya4ey"]
+albedo_color = Color(0.97993094, 0.9058227, 0.7202413, 1)
+
 [sub_resource type="Environment" id="Environment_85g3d"]
 background_mode = 1
-background_color = Color(0.00091255904, 0, 0.087876715, 1)
+ambient_light_color = Color(0.033615407, 0.2689249, 0.3853503, 1)
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.001
+volumetric_fog_albedo = Color(0.6619197, 0.59523845, 0.4405352, 1)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ya4ey"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkv2x"]
+albedo_texture = ExtResource("12_trceg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbj1t"]
+albedo_texture = ExtResource("13_a8y0u")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_trceg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_muem4"]
+albedo_color = Color(0, 0.32156864, 0.32156864, 1)
+albedo_texture = SubResource("PlaceholderTexture2D_trceg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_trceg"]
+albedo_color = Color(3.098605, 2.5008476, 1.0896143, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8y0u"]
+albedo_color = Color(0.0012630901, 0.031156203, 0.062385723, 1)
 
 [node name="Main" type="Node3D" unique_id=1281093909]
 process_mode = 3
@@ -37,10 +64,11 @@ script = ExtResource("1_sugp2")
 
 [node name="Player" parent="." unique_id=2113815111 instance=ExtResource("1_o5qli")]
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1504498, 2.3178196, 17.313038)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.15045, 1.8178196, -19.186962)
 inv = ExtResource("4_ya4ey")
 
 [node name="UserInterface" parent="." unique_id=537759978 instance=ExtResource("4_o6xl0")]
+process_mode = 3
 
 [node name="Environment" type="Node" parent="." unique_id=203829377]
 
@@ -49,65 +77,1158 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.14
 navigation_mesh = SubResource("NavigationMesh_tbgi4")
 
 [node name="Enemy" parent="Environment/NavigationRegion3D" unique_id=1881498892 instance=ExtResource("6_tefeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.261681, 3.865858, 9.669981)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.427032, 0.74818516, 0.56839514)
+chase_timer_MAX = 3
 player_path = NodePath("../../../Player")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=77051390]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.240997, 1.5063477, -5.84204)
+[node name="sm_house" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=77051390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.490997, 3.6889648, -9.927941)
 material_override = SubResource("StandardMaterial3D_tefeu")
 use_collision = true
 collision_layer = 4
 collision_mask = 0
-size = Vector3(1, 4.6347656, 16.888184)
+size = Vector3(0.5, 9, 30)
 material = SubResource("StandardMaterial3D_o6xl0")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=33578031]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.956308, 1.5063477, -2.1499019)
+[node name="sm_house2" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=469542860]
+transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 4.371139e-08, 1, 3.6655884, 2.1655889, -0.27709913)
 material_override = SubResource("StandardMaterial3D_tefeu")
 use_collision = true
 collision_layer = 4
 collision_mask = 0
-size = Vector3(1, 4.6347656, 9.503906)
+size = Vector3(0.5, 9, 29)
 material = SubResource("StandardMaterial3D_o6xl0")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=960138513]
+[node name="sm_house6" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=1489358340]
+transform = Transform3D(-4.3711385e-08, 0, 1, -1, -4.371139e-08, -4.371139e-08, 4.3711385e-08, -1, 0, 12.915588, 2.1655889, -7.527103)
 material_override = SubResource("StandardMaterial3D_tefeu")
 use_collision = true
 collision_layer = 4
 collision_mask = 0
-size = Vector3(5.2781982, 1.6220703, 5.2041016)
+size = Vector3(0.5, 14.5, 26.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_house3" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=193625012]
+transform = Transform3D(1.0000002, 8.7422784e-08, -6.059673e-08, 8.742278e-08, -1, 4.5586335e-15, -6.059673e-08, -1.5718553e-14, -1.0000002, 8.165588, 0.16558838, 6.722901)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 9, 15)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_house4" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=2117266255]
+transform = Transform3D(-1.0430813e-07, -1.9539922e-14, -1.0000002, 8.742278e-08, -1, 4.5586335e-15, -1.0000002, -8.7422784e-08, 1.0430813e-07, 15.665588, 0.16558838, -0.77709913)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 9, 15)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_house7" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=1030426341]
+transform = Transform3D(-1.0000002, -8.7422784e-08, 1.4801954e-07, 8.742278e-08, -1, 4.5586335e-15, 1.4801954e-07, 2.336129e-14, 1.0000002, 14.165588, -0.8344116, -8.277096)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 9, 15)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_house8" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=457238787]
+transform = Transform3D(-1.0000002, -8.7422784e-08, 1.4801954e-07, 8.742278e-08, -1, 4.5586335e-15, 1.4801954e-07, 2.336129e-14, 1.0000002, 14.16559, 1.1655884, -4.0270953)
+material_override = SubResource("StandardMaterial3D_tefeu")
+operation = 2
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(1.5, 1, 4.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_house9" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=324379606]
+transform = Transform3D(-1.0000002, -8.7422784e-08, 1.4801954e-07, 8.742278e-08, -1, 4.5586335e-15, 1.4801954e-07, 2.336129e-14, 1.0000002, 14.165588, 1.1655884, -12.027092)
+material_override = SubResource("StandardMaterial3D_tefeu")
+operation = 2
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(1.5, 1, 4.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_house5" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_house" unique_id=2134140961]
+transform = Transform3D(-1.0430813e-07, -1.9539922e-14, -1.0000002, 8.742278e-08, -1, 4.5586335e-15, -1.0000002, -8.7422784e-08, 1.0430813e-07, 7.6655903, 0.16558838, -14.777105)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 9, 15)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=33578031]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.958263, 1.5063477, -24.899902)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence3" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=288781262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence2" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1841862927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence4" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1123033849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence5" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=230485249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence6" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=2050589467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence7" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=182230388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence8" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=912313890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence9" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1902371081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence10" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1246711147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence11" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1030255868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence12" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1077001871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence13" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=208748544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence14" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1392275165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence15" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=323062873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence16" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1672758737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence17" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1558997536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence18" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1490016166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence19" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=603572165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence20" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1708733946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence21" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=2078527774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence22" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=623655265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence23" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1338317598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence24" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1731107465]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence25" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1613990889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence26" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1408130543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence27" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1670873571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence28" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1764268039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence29" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=477944843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence30" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=487601393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence31" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1765986358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence32" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1381475483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 31)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence33" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=2035125455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence34" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1028398429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 33)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence35" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1752810080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 34)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence36" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=2043575373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 32)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence37" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1932441254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence38" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=150852180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence39" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1402487038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 35)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence40" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=234266572]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence41" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=55754918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence42" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=498012475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 38)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence43" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=315262982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence44" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=907781797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 43.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence45" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1844408747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 41.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence46" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=345432551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence47" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=381388261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 46)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence48" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=783489709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence49" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence" unique_id=1978606522]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 43.500008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence3" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=857856916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence2" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1724268898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence4" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1030162448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence5" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=771203579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence6" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=82457849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence7" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=409133767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence8" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=778297982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence9" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=713387845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence10" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1252075378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence11" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=387274548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence12" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=2038598065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.9999995)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence13" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1606111839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence14" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1907453359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence15" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=310141158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence16" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=199039808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence17" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1177941576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence18" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1403248870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence19" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=891302140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence20" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1286346792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence21" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=516527425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence22" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1855404863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence23" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1181934198]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence24" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1553034546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence25" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=2071903235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence26" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1739502448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence27" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=192958361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 23)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence28" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1124379411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 27)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence29" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1354166794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 28)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence30" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1894863999]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence31" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=577436754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence32" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1261956925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 31)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence33" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=2043042643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence34" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1557736662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 33)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence35" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=341544167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 34)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence36" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=817317291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 32)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence37" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=476998845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence38" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1465433689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 37)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence39" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=310750662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9073486e-06, 0, 35)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence40" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1088654983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 39)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence41" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1853243295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence42" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1056142151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 38)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence43" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=159588722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 42.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence44" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1680816417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 43.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence45" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=1466044128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 41.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence46" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=191248326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence47" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=2000259952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 46)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="sm_fence48" type="CSGBox3D" parent="Environment/NavigationRegion3D/sm_fence/sm_fence49" unique_id=40114368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 44.000008)
+material_override = SubResource("StandardMaterial3D_tefeu")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(0.5, 4.6347656, 0.5)
 material = SubResource("StandardMaterial3D_o6xl0")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=544602112]
-transform = Transform3D(-0.06778895, 0, 0.9976997, 0, 1, 0, -0.9976997, 0, -0.06778895, 15.240995, 1.5063477, 8.771926)
+transform = Transform3D(-0.06778895, 0, 0.9976997, 0, 1, 0, -0.9976997, 0, -0.06778895, 19.242945, 2.8237305, 2.7717922)
 material_override = SubResource("StandardMaterial3D_tefeu")
 use_collision = true
 collision_layer = 4
 collision_mask = 0
-size = Vector3(1, 4.6347656, 9.503906)
+size = Vector3(1, 6, 8.5)
+material = SubResource("StandardMaterial3D_o6xl0")
+
+[node name="door hole" type="CSGBox3D" parent="Environment/NavigationRegion3D/CSGBox3D2" unique_id=1997070991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0031256676, -1, 0.13221169)
+material_override = SubResource("StandardMaterial3D_tefeu")
+operation = 2
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(2, 4, 2.1435547)
 material = SubResource("StandardMaterial3D_o6xl0")
 
 [node name="ground" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=2075765462]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 18.353518, 8.046627e-07, 30.167465)
 material_override = SubResource("StandardMaterial3D_tefeu")
 use_collision = true
 collision_layer = 4
 collision_mask = 0
-size = Vector3(1, 59.29297, 52.66507)
+size = Vector3(1, 96, 113)
 material = SubResource("StandardMaterial3D_tipki")
+
+[node name="Door" parent="Environment/NavigationRegion3D" unique_id=1094267016 instance=ExtResource("7_ya4ey")]
+transform = Transform3D(-1.0982152, -1.4612359e-08, -0.008948545, 1.6675836e-08, -1.1, -3.503585e-08, -0.024155062, -9.5048385e-08, 0.40684745, 20.5, 4, 3.2418268)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=367639430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.9995, -17.749998)
+material_override = SubResource("StandardMaterial3D_ya4ey")
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(2, 0.001, 13.5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1960622624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.000002, 1.2490001, -24.249998)
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(2, 1.5, 0.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1381926762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.2490001, -11.249999)
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(2, 1.5, 0.5)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=253368418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1.2490001, -17.999998)
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(2, 1.5, 3)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=544567726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.749, -16.749998)
+size = Vector3(0.5, 1.5, 0.5)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=815598352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.499, -16.249998)
+size = Vector3(0.5, 1, 0.5)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=945104829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.499, -15.749999)
+size = Vector3(0.5, 1, 0.5)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=231963125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.749, -15.249999)
+size = Vector3(0.5, 1.5, 0.5)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=873628030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.749, -22.249998)
+size = Vector3(0.5, 1.5, 0.5)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1367162408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.499, -21.749998)
+size = Vector3(0.5, 1, 0.5)
+
+[node name="trim" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=2125911684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.500002, 0.49900007, -24.457056)
+size = Vector3(15, 1, 0.0859375)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim" unique_id=2034015132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.121520996, 0.039482117)
+size = Vector3(15, 0.756958, 0.16491699)
+
+[node name="trim3" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=2038462687]
+transform = Transform3D(-1.5529405e-22, 8.742277e-08, -1.9000001, 1, 3.5527135e-15, -3.6303023e-15, 3.5527137e-15, -0.99999994, -1.6610328e-07, 20.000006, 0.49900007, -18.737844)
+size = Vector3(15, 1, 0.0859375)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim3" unique_id=2096278675]
+transform = Transform3D(1, -8.3518705e-23, 4.2351647e-22, 0, 0.9999999, 0, 0, 0, 3.1000001, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim4" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=261076144]
+transform = Transform3D(3.5527137e-15, -1, -4.371139e-08, 1, 3.5527137e-15, -1.9106853e-15, -4.472084e-23, -4.371139e-08, 1, 21.246109, 0.49900007, -7.9613876)
+size = Vector3(15, 1, 0.0859375)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim4" unique_id=2019646479]
+transform = Transform3D(1, -8.351872e-23, 0, 0, 1, 0, 0, 0, 1, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim6" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1295290591]
+transform = Transform3D(-3.5527137e-15, 1, 1.3113416e-07, 1, 3.5527137e-15, -1.9106853e-15, -3.5530893e-22, 1.3113416e-07, -1, 17.742487, 0.49900007, -7.9613876)
+size = Vector3(15, 1, 0.0859375)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim6" unique_id=795367681]
+transform = Transform3D(1, -8.351872e-23, 0, 0, 1, 0, 0, 0, 1, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim5" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1633159149]
+transform = Transform3D(-1.5529405e-22, 8.742278e-08, -1, 1, 3.5527137e-15, -1.9106853e-15, 3.5527137e-15, -1, -8.742278e-08, 23.605305, 0.49900007, -10.812075)
+size = Vector3(15, 0.4111328, 0.3071289)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim5" unique_id=1616225156]
+transform = Transform3D(1, -8.351872e-23, 0, 0, 1, 0, 0, 0, 1, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim7" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1120704780]
+transform = Transform3D(-1.5529405e-22, 8.742278e-08, -1, 1, 3.5527137e-15, -1.9106853e-15, 3.5527137e-15, -1, -8.742278e-08, 16.105309, 0.49900007, -24.312077)
+size = Vector3(15, 0.4111328, 0.3071289)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim7" unique_id=415613654]
+transform = Transform3D(1, -8.351872e-23, 0, 0, 1, 0, 0, 0, 1, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim8" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1385471543]
+transform = Transform3D(-1.5529405e-22, 8.742278e-08, -1, 1, 3.5527137e-15, -1.9106853e-15, 3.5527137e-15, -1, -8.742278e-08, 28.605309, 0.49900007, -24.312075)
+size = Vector3(15, 0.4111328, 0.3071289)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim8" unique_id=989349608]
+transform = Transform3D(1, -8.351872e-23, 0, 0, 1, 0, 0, 0, 1, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim9" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1284508818]
+transform = Transform3D(-1.5529405e-22, 8.742278e-08, -1, 1, 3.5527137e-15, -1.9106853e-15, 3.5527137e-15, -1, -8.742278e-08, 28.605307, 0.49900007, -11.812076)
+size = Vector3(15, 0.4111328, 0.3071289)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim9" unique_id=1347341910]
+transform = Transform3D(1, -8.351872e-23, 0, 0, 1, 0, 0, 0, 1, 0, 0.006958008, 0.010551453)
+size = Vector3(15, 0.5, 0.22277832)
+
+[node name="trim2" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=2084105148]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15.779718, 0.49900007, -10.793611)
+size = Vector3(27.326904, 1, 0.0859375)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D/trim2" unique_id=751125790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0136719, -0.121520996, 0.039482117)
+size = Vector3(21.027344, 0.756958, 0.16491699)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=633704004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.75, 2.749, -20.749998)
+size = Vector3(0.5, 1.5, 0.5)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=2086957516]
+transform = Transform3D(-0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, -0.76604444, 27.76791, 2.749, -11.425465)
+size = Vector3(0.5, 1.5, 0.5)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1132054892]
+transform = Transform3D(-0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, -0.76604444, 28.089304, 2.499, -11.808488)
+size = Vector3(0.5, 1, 0.5)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1494659461]
+transform = Transform3D(-1.5893256e-08, 0, 1, 0, 1, 0, -1, 0, -1.5893256e-08, 19.089304, 5.999, -10.808488)
+size = Vector3(0.5, 1, 0.5)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=1520140468]
+transform = Transform3D(-0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, -0.76604444, 28.410696, 2.499, -12.19151)
+size = Vector3(0.5, 1, 0.5)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Environment/NavigationRegion3D" unique_id=118333060]
+transform = Transform3D(-0.76604444, 0, 0.6427876, 0, 1, 0, -0.6427876, 0, -0.76604444, 28.73209, 2.749, -12.5745325)
+size = Vector3(0.5, 1.5, 0.5)
 
 [node name="Lights" type="Node" parent="." unique_id=1480843725]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Lights" unique_id=1101573747]
 environment = SubResource("Environment_85g3d")
+camera_attributes = SubResource("CameraAttributesPractical_ya4ey")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1015399144]
 transform = Transform3D(-0.995341, -0.010292742, 0.09586814, -0.09641908, 0.10625263, -0.98965347, -1.2060952e-09, -0.994286, -0.10675, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_mode = 0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights" unique_id=253703347]
+transform = Transform3D(0.5868241, 0.64278764, -0.4924039, -0.4924039, 0.7660445, 0.4131759, 0.64278764, 0, 0.7660445, -29, 82, 0)
+light_energy = 0.2
+shadow_enabled = true
+sky_mode = 1
 
 [node name="Enemies" type="Node" parent="." unique_id=1813713851]
 
 [node name="BloodyNote" parent="." unique_id=461936748 instance=ExtResource("10_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1179655, -2.296057)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.1179655, -18.296057)
 
 [node name="BloodyNote2" parent="." unique_id=1772351682 instance=ExtResource("10_choun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.324688, 1.1179655, -2.296057)
@@ -117,21 +1238,173 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.576312, 1.1179655, -2.2960
 item = ExtResource("11_ya4ey")
 
 [node name="light_switch" parent="." unique_id=604630940 instance=ExtResource("8_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3885865, -2.7376037)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, 5.3885865, -14.237604)
 
 [node name="light_switch2" parent="." unique_id=1044003499 instance=ExtResource("8_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.625336, 3.3885865, -2.7376037)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1253357, 6.3885865, -14.237604)
 
 [node name="light_switch3" parent="." unique_id=537264006 instance=ExtResource("8_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.124179, 3.3885865, -9.52401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.875821, 5.3885865, -21.02401)
 
 [node name="light_switch4" parent="." unique_id=1085981436 instance=ExtResource("8_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8768334, 3.3885865, 2.204821)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.623167, 5.3885865, -13.795179)
 
 [node name="Button" parent="." unique_id=528319614 instance=ExtResource("9_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0498843, 1.6536505, -1.2914299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.049885, 1.6536505, -17.29143)
 collision_layer = 8
 collision_mask = 0
+
+[node name="housefolder" type="Node" parent="." unique_id=1644997306]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="housefolder" unique_id=307446760]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 43.5, 14, 232)
+size = Vector3(48, 27, 30)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="housefolder" unique_id=1943149479]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 62, 14, 201)
+size = Vector3(14, 27, 30)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="housefolder" unique_id=1615069550]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 55, 14, 192)
+size = Vector3(4, 27, 16)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="housefolder" unique_id=627357511]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 65, 14, 178)
+size = Vector3(24, 27, 24)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="housefolder" unique_id=1224014894]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 48.75, 43.25, 226.5)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(123, 31.5, 56.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="housefolder/CSGBox3D6" unique_id=350630379]
+transform = Transform3D(0.99999994, 7.590405e-09, 6.640839e-10, -7.590404e-09, 0.9848078, 0.17364816, 6.6408035e-10, -0.17364825, 0.9848076, 1.873661, 18.318695, -4.1976624)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+gi_mode = 0
+operation = 2
+size = Vector3(143, 41.5, 76)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="housefolder" unique_id=1692730726]
+transform = Transform3D(1.9106855e-15, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -1, 0, -4.371139e-08, 24.249996, 5.25, 170.25)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(7.5, 31.5, 56.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="housefolder/CSGBox3D7" unique_id=436056520]
+transform = Transform3D(0.99999994, 7.590405e-09, 6.640839e-10, -7.590404e-09, 0.9848078, 0.17364816, 6.6408035e-10, -0.17364825, 0.9848076, 1.873661, 18.318695, -4.1976624)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+gi_mode = 0
+operation = 2
+size = Vector3(143, 41.5, 76)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="housefolder" unique_id=839224930]
+transform = Transform3D(-1, 4.371139e-08, -4.3711385e-08, -4.371139e-08, -4.371139e-08, 1, 4.3711385e-08, 1, 4.3711392e-08, 25.499996, 5.2499995, 254.9995)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(6, 2, 56.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="housefolder" unique_id=2082060586]
+transform = Transform3D(-1, 4.371139e-08, -4.3711385e-08, -4.371139e-08, -4.371139e-08, 1, 4.3711385e-08, 1, 4.3711392e-08, 25.499996, 5.2499995, 230.4995)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(6, 2, 56.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="housefolder" unique_id=2043725246]
+transform = Transform3D(-1, 4.371139e-08, -4.3711385e-08, -4.371139e-08, -4.371139e-08, 1, 4.3711385e-08, 1, 4.3711392e-08, 25.499996, 5.2499995, 209.9995)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(6, 2, 56.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="housefolder" unique_id=1513814942]
+transform = Transform3D(8.742278e-08, 1, 4.3711395e-08, -4.371139e-08, -4.371139e-08, 1, 1, -8.742278e-08, 4.371138e-08, 27.499996, 8.5, 242.9995)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(9, 2, 15.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="housefolder" unique_id=1264453531]
+transform = Transform3D(8.742278e-08, 1, 4.3711395e-08, -4.371139e-08, -4.371139e-08, 1, 1, -8.742278e-08, 4.371138e-08, 27.499996, 15, 220.9995)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(9, 2, 15.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="housefolder" unique_id=1039568931]
+transform = Transform3D(8.742278e-08, 1, 4.3711395e-08, -4.371139e-08, -4.371139e-08, 1, 1, -8.742278e-08, 4.371138e-08, 27.499996, 15, 220.9995)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(9, 2, 15.5)
+material = SubResource("StandardMaterial3D_muem4")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="housefolder" unique_id=992083682]
+transform = Transform3D(8.742278e-08, 1, 4.3711395e-08, -4.371139e-08, -4.371139e-08, 1, 1, -8.742278e-08, 4.371138e-08, 27.499996, 8.5, 245.4995)
+material_overlay = SubResource("StandardMaterial3D_trceg")
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="housefolder/CSGCylinder3D" unique_id=986497272]
+transform = Transform3D(1, 0, 0, 0, 1, -2.6865683e-16, 0, -2.6865683e-16, 1, 0, 0, 2)
+material_overlay = SubResource("StandardMaterial3D_trceg")
+operation = 1
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="housefolder" unique_id=973742419]
+transform = Transform3D(8.742278e-08, 1, 4.3711395e-08, -4.371139e-08, -4.371139e-08, 1, 1, -8.742278e-08, 4.371138e-08, 27.499996, 8.5, 240.4995)
+material_overlay = SubResource("StandardMaterial3D_trceg")
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="housefolder/CSGCylinder3D2" unique_id=1227691542]
+transform = Transform3D(1, 0, 0, 0, 1, -2.6865683e-16, 0, -2.6865683e-16, 1, 0, 0, 2)
+material_overlay = SubResource("StandardMaterial3D_trceg")
+operation = 1
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="housefolder" unique_id=463538542]
+transform = Transform3D(6.29444e-08, 1, 4.327428e-08, -3.14722e-08, -4.371139e-08, 0.99, 0.71999997, -8.742278e-08, 4.327427e-08, 26.999996, 8, 240.4995)
+material_overlay = SubResource("StandardMaterial3D_a8y0u")
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="housefolder/CSGCylinder3D3" unique_id=1443064086]
+transform = Transform3D(1, 0, 0, 0, 1, -2.6865683e-16, 0, -2.6865683e-16, 1, 0, 0, 2)
+material_overlay = SubResource("StandardMaterial3D_trceg")
+operation = 1
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="housefolder" unique_id=1942310644]
+transform = Transform3D(6.29444e-08, 1, 4.327428e-08, -3.14722e-08, -4.371139e-08, 0.99, 0.71999997, -8.742278e-08, 4.327427e-08, 26.999996, 8, 245.4995)
+material_overlay = SubResource("StandardMaterial3D_a8y0u")
+radius = 2.0
+height = 2.5
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="housefolder/CSGCylinder3D4" unique_id=218770935]
+transform = Transform3D(1, 0, 0, 0, 1, -2.6865683e-16, 0, -2.6865683e-16, 1, 0, 0, 2)
+material_overlay = SubResource("StandardMaterial3D_trceg")
+operation = 1
+radius = 2.0
+height = 2.5
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="housefolder" unique_id=710025722]
+transform = Transform3D(1.9106855e-15, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 1, -1, 0, -4.371139e-08, 18.749996, 2.25, 275.75)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+size = Vector3(7.5, 31.5, 50.5)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="housefolder/CSGBox3D8" unique_id=1016854866]
+transform = Transform3D(0.99999994, 7.590405e-09, 6.640839e-10, -7.590404e-09, 0.9848078, 0.17364816, 6.6408035e-10, -0.17364825, 0.9848076, 1.873661, 18.318695, -4.1976624)
+material_override = SubResource("StandardMaterial3D_jkv2x")
+gi_mode = 0
+operation = 2
+size = Vector3(143, 41.5, 76)
+material = SubResource("StandardMaterial3D_jbj1t")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="housefolder" unique_id=677787922]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 51.25, 14, 268)
+size = Vector3(24, 27, 56.5)
 
 [connection signal="interacted" from="Button" to="light_switch" method="_on_button_interacted"]
 [connection signal="interacted" from="Button" to="light_switch2" method="_on_button_interacted"]

@@ -13,7 +13,7 @@ font_color = Color(0.5101585, 0.028430268, 0.08829234, 1)
 outline_size = 5
 outline_color = Color(0.20470247, 0.009617366, 0, 1)
 
-[node name="UserInterface" type="Control" unique_id=537759978]
+[node name="UserInterface" type="Control" unique_id=537759978 groups=["ui"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,32 +36,6 @@ grow_vertical = 2
 texture = ExtResource("2_y1h3b")
 metadata/_edit_use_anchors_ = true
 
-[node name="Retry" type="ColorRect" parent="." unique_id=281274457]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Retry" unique_id=136379057]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -93.0
-offset_top = -8.0
-offset_right = 93.0
-offset_bottom = 8.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Press Enter to retry"
-
 [node name="MainMenu" type="Control" parent="." unique_id=1660842003]
 layout_mode = 1
 anchors_preset = 15
@@ -80,7 +54,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.53333336)
 
 [node name="MainMenuButtons" type="PanelContainer" parent="MainMenu" unique_id=938862913]
-process_mode = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.066
@@ -119,6 +92,24 @@ text = "SETTINGS
 layout_mode = 2
 size_flags_vertical = 3
 text = "QUIT"
+
+[node name="HUD" type="Control" parent="." unique_id=1421583958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StaminaBar" type="ProgressBar" parent="HUD" unique_id=663107754]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01875
+anchor_top = 0.8675926
+anchor_right = 0.175
+anchor_bottom = 0.96018517
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="MainMenu/MainMenuButtons/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="MainMenu/MainMenuButtons/VBoxContainer/Settings" to="." method="_on_settings_pressed"]

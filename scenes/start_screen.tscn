@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bq1ofqq2hu6pl"]
+
+[ext_resource type="Script" uid="uid://tmfe7tccp7l" path="res://scripts/start_screen.gd" id="1_tx5wa"]
+[ext_resource type="FontFile" uid="uid://c1sw304oj8i28" path="res://ui/Trajan Pro Regular.ttf" id="2_o7i0r"]
+[ext_resource type="AudioStream" uid="uid://dn1tyiw45u4fh" path="res://assets/music/introdoorsound.mp3" id="3_he1sj"]
+
+[sub_resource type="Theme" id="Theme_o7i0r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cllq7"]
+font = ExtResource("2_o7i0r")
+font_size = 54
+font_color = Color(0.5101585, 0.028430268, 0.08829234, 1)
+outline_size = 5
+outline_color = Color(0.20470247, 0.009617366, 0, 1)
+
+[node name="StartScreen" type="Control" unique_id=127341641]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx5wa")
+
+[node name="Opacity" type="ColorRect" parent="." unique_id=945621535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.53333336)
+
+[node name="MainMenuButtons" type="PanelContainer" parent="." unique_id=1355950075]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.24366666
+anchor_right = 0.328
+anchor_bottom = 0.6267778
+offset_left = -0.7200012
+offset_top = -0.16000366
+offset_right = 0.24017334
+offset_bottom = 0.08013916
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuButtons" unique_id=445069201]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainMenuButtons/VBoxContainer" unique_id=1065965369]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_o7i0r")
+text = "CONCRETE WALL"
+label_settings = SubResource("LabelSettings_cllq7")
+vertical_alignment = 1
+
+[node name="StartGame" type="Button" parent="MainMenuButtons/VBoxContainer" unique_id=1571737596]
+layout_mode = 2
+size_flags_vertical = 3
+text = "RESUME"
+
+[node name="Settings" type="Button" parent="MainMenuButtons/VBoxContainer" unique_id=386400475]
+layout_mode = 2
+size_flags_vertical = 3
+text = "SETTINGS
+(does nothing)"
+
+[node name="ExitGame" type="Button" parent="MainMenuButtons/VBoxContainer" unique_id=1484810062]
+layout_mode = 2
+size_flags_vertical = 3
+text = "QUIT"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer2D" parent="." unique_id=2042047632]
+stream = ExtResource("3_he1sj")
+
+[connection signal="pressed" from="MainMenuButtons/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MainMenuButtons/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenuButtons/VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

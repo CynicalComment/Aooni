@@ -1,9 +1,10 @@
 extends Control
+@onready var stamina_bar = $HUD/StaminaBar
+
 
 func _on_start_game_pressed():
 	$MainMenu.hide()
-	get_tree().paused = false
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	GameState.pop_state()
 
 
 func _on_settings_pressed():
@@ -11,4 +12,7 @@ func _on_settings_pressed():
 
 
 func _on_exit_game_pressed():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scenes/start_screen.tscn")
+	
+func set_stamina(value: float) -> void:
+	stamina_bar.value = value * 100

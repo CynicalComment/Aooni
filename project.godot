@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Horror3d"
-run/main_scene="uid://155xx7s6y6ta"
+run/main_scene="uid://bq1ofqq2hu6pl"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+InventoryManger="*uid://y3oip7782kku"
+GameState="*uid://bj4sphboo5blb"
+MusicPlayer="*uid://c3p1yh3qx832"
 
 [display]
 
@@ -25,6 +31,8 @@ mouse_cursor/custom_image="uid://i1wh1i3srr1g"
 [global_group]
 
 interactible="ObjectsThatPlayerCanInteractWith"
+ui="update ui from other stuff"
+player=""
 
 [input]
 

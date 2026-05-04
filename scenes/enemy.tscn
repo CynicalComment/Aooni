@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b4ja22l6748xr"]
+
+[ext_resource type="Script" uid="uid://k4v8k1sgwgi8" path="res://scripts/enemy.gd" id="1_48uxq"]
+[ext_resource type="AudioStream" uid="uid://j1ttk65a3wjm" path="res://assets/music/dragon-studio-heartbeat-sound-372448.mp3" id="2_md0e3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7p1mj"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hbeq5"]
+material = SubResource("StandardMaterial3D_7p1mj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48uxq"]
+albedo_color = Color(1.5926467, 0.46014237, 0.44543448, 1)
+metallic = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_md0e3"]
+material = SubResource("StandardMaterial3D_48uxq")
+radius = 0.3
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v8rrl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7p1mj"]
+height = 10.0
+radius = 1.5
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1881498892]
+process_mode = 1
+collision_layer = 6
+script = ExtResource("1_48uxq")
+heartbeat_file = ExtResource("2_md0e3")
+
+[node name="MainBody" type="MeshInstance3D" parent="." unique_id=53192995]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0)
+mesh = SubResource("CapsuleMesh_hbeq5")
+
+[node name="EyeBalls" type="MeshInstance3D" parent="MainBody" unique_id=935524372]
+transform = Transform3D(4.095603e-09, 2.3178213e-08, 1.0458645, -0.42888877, 0.00785998, -2.3222856e-16, -0.019048186, -0.17697519, 1.3714856e-07, -0.0008285418, 0.5912235, -0.31963965)
+mesh = SubResource("CapsuleMesh_md0e3")
+
+[node name="KillBox" type="CollisionShape3D" parent="." unique_id=1043968868]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0)
+shape = SubResource("CapsuleShape3D_v8rrl")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1608726545]
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="." unique_id=2112072434]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 3, 0)
+shape = SubResource("CylinderShape3D_7p1mj")
+target_position = Vector3(0, -5, 0)
+
+[node name="Audio_Heartbeat" type="AudioStreamPlayer3D" parent="." unique_id=1385472958]
+max_distance = 15.0
