@@ -5,6 +5,14 @@ extends Control
 
 var is_open = false
 
+#CHECK FOR ITEM IN OTHER SCRIPTS #IE IF HAS ITEM(PATH)
+func has_item(item_path: String) -> bool:
+	var item_res = load(item_path)
+	for slot in inv.slots:
+		if slot == item_res:
+			return true
+	return false
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	inv.update.connect(update_slots)

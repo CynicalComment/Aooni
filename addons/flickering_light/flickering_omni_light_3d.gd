@@ -5,6 +5,7 @@ class_name FlickeringOmniLight3D
 @export var speed: float = 10.0  # frames per second
 @export_range(0.0, 1.0, 0.001) var phase: float = 0.0
 @export var max_energy: float = 2.0  # maximum brightness
+@export var min_energy: float = .2
 
 var _base_flickering_light := BaseFlickeringLight.new()
 
@@ -12,4 +13,4 @@ var _base_flickering_light := BaseFlickeringLight.new()
 func _process(delta: float) -> void:
 	var next_energy = _base_flickering_light.process(delta, pattern, speed, max_energy, phase)
 	if next_energy != null:
-		self.light_energy = next_energy
+		self.light_energy = max(min_energy, next_energy)

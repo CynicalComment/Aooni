@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crq0d5hser74x"]
+
+[ext_resource type="Texture2D" uid="uid://b10fcippb011x" path="res://materials/eyeball.tres" id="1_jwkk1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4skb"]
+albedo_texture = ExtResource("1_jwkk1")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b4ivh"]
+material = SubResource("StandardMaterial3D_l4skb")
+size = Vector2(1, 1.5)
+
+[node name="AnimatedPoster" type="MeshInstance3D" unique_id=1040821825 groups=["interactible", "player"]]
+transform = Transform3D(-4.371139e-08, -1, 4.371139e-08, 0, -4.371139e-08, -1, 1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_b4ivh")

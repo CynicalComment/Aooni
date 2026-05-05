@@ -74,7 +74,6 @@ mesh = SubResource("QuadMesh_jej6c")
 
 [node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=2128439450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12915587)
-visible = false
 light_color = Color(0.87267923, 0.8760432, 0.72137827, 1)
 light_volumetric_fog_energy = 0.203
 light_size = 0.497

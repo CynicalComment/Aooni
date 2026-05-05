@@ -16,3 +16,12 @@ func insert(item: InvItem):
 			emptyslots[0].item = item
 			emptyslots[0].amount = 1
 	update.emit()
+	
+	
+# Inv.gd
+func has_item(item_path: String) -> bool:
+	var item_res = load(item_path)
+	for slot in slots:
+		if slot.item == item_res:
+			return true
+	return false

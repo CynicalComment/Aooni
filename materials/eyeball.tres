@@ -1,0 +1,30 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://b10fcippb011x"]
+
+[ext_resource type="Texture2D" uid="uid://hc1ovrjwm8wf" path="res://materials/lookingaroundPoster/Dad1.png" id="1_nh6gs"]
+[ext_resource type="Texture2D" uid="uid://dw6op0i5jku8h" path="res://materials/lookingaroundPoster/Dad2.png" id="2_txv6w"]
+[ext_resource type="Texture2D" uid="uid://2el7yqmndn7h" path="res://materials/lookingaroundPoster/Dad3.png" id="3_ui1xs"]
+[ext_resource type="Texture2D" uid="uid://duipy246ahtk7" path="res://materials/lookingaroundPoster/Dad4.png" id="4_rn136"]
+[ext_resource type="Texture2D" uid="uid://tmb5r2j2op7w" path="res://materials/lookingaroundPoster/Dad5.png" id="5_xh6m5"]
+[ext_resource type="Texture2D" uid="uid://dhl6njrd25jgo" path="res://materials/lookingaroundPoster/Dad6.png" id="6_k2rg7"]
+[ext_resource type="Texture2D" uid="uid://cbii61owgcgvl" path="res://materials/lookingaroundPoster/Dad7.png" id="7_641hf"]
+[ext_resource type="Texture2D" uid="uid://ddt7amei1csj0" path="res://materials/lookingaroundPoster/Dad8.png" id="8_swngo"]
+
+[resource]
+frames = 8
+speed_scale = 1.9
+frame_0/texture = ExtResource("1_nh6gs")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("2_txv6w")
+frame_1/duration = 0.5
+frame_2/texture = ExtResource("3_ui1xs")
+frame_2/duration = 0.5
+frame_3/texture = ExtResource("4_rn136")
+frame_3/duration = 0.5
+frame_4/texture = ExtResource("5_xh6m5")
+frame_4/duration = 0.5
+frame_5/texture = ExtResource("6_k2rg7")
+frame_5/duration = 0.5
+frame_6/texture = ExtResource("7_641hf")
+frame_6/duration = 0.5
+frame_7/texture = ExtResource("8_swngo")
+frame_7/duration = 0.5
