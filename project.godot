@@ -28,6 +28,10 @@ window/size/viewport_height=1080
 window/size/mode=2
 mouse_cursor/custom_image="uid://i1wh1i3srr1g"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/flickering_light/plugin.cfg", "res://addons/proto_shape/plugin.cfg")
+
 [global_group]
 
 interactible="ObjectsThatPlayerCanInteractWith"

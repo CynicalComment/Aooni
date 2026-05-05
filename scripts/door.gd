@@ -15,11 +15,14 @@ var player = null
 
 func _on_interacted(body):
 	player = body
-	#if InventoryManger.inventory.slots.has(BloodyNote.tres):
-	if is_open:
-		close_door()
-	else:
-		open_door()
+	if locked:
+		if InventoryManger.inventory.slots.has("res://inventory/items/BloodyNote.tres"):
+			locked = false
+	if not locked:
+		if is_open:
+			close_door()
+		else:
+			open_door()
 	
 func open_door():
 	is_open = true

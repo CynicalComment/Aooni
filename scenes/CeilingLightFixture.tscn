@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cltonipo0ji4u"]
+
+[ext_resource type="Script" uid="uid://dcutkcp54bu0j" path="res://addons/flickering_light/flickering_omni_light_3d.gd" id="1_a06ot"]
+[ext_resource type="Shader" uid="uid://dj6ql111jhelv" path="res://assets/- Classic 64 Asset Pack 0.6/Doors/Materials/GlassShader.gdshader" id="1_xm72f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t10un"]
+render_priority = 0
+shader = ExtResource("1_xm72f")
+shader_parameter/albedo = Color(0.41861197, 0.41137242, 0.21352741, 0.36862746)
+shader_parameter/roughness = 0.15
+shader_parameter/normal_strength = 1.0
+shader_parameter/edge_color = Color(0.010090309, 0.010090298, 0.010090301, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a06ot"]
+material = SubResource("ShaderMaterial_t10un")
+size = Vector3(0.3, 0.3, 0.3)
+
+[node name="CeilingLight01" type="MeshInstance3D" unique_id=1472750185]
+gi_mode = 2
+mesh = SubResource("BoxMesh_a06ot")
+
+[node name="FlickeringOmniLight3D" type="OmniLight3D" parent="." unique_id=1564102176]
+light_color = Color(0.95523626, 0.9276615, 0.71936023, 1)
+light_volumetric_fog_energy = 2.342
+shadow_enabled = true
+omni_range = 9.0
+omni_attenuation = 3.0
+script = ExtResource("1_a06ot")
+pattern = "mmmmmmmammamamaaamammma"
+speed = 3.0
+max_energy = 1.0
+metadata/_custom_type_script = "uid://dcutkcp54bu0j"

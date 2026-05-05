@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bvantwyso3wfk"]
+
+[ext_resource type="Texture2D" uid="uid://5hoyta7ftkm3" path="res://assets/- Classic 64 Asset Pack 0.6/Wood/Materials/wood_planks_2.png" id="1_rmmkh"]
+
+[resource]
+albedo_texture = ExtResource("1_rmmkh")
+uv1_scale = Vector3(5, 5, 1)

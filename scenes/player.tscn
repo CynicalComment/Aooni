@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ctvrrj3srh0r3" path="res://Inv_slot.gd" id="3_smehm"]
 [ext_resource type="PackedScene" uid="uid://b0xvsl0lkph0c" path="res://inventory/inv_ui.tscn" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://cw1cxd5h4vkgw" path="res://inventory/inventory.gd" id="5_jej6c"]
+[ext_resource type="Shader" uid="uid://bjwvtm2oftnd1" path="res://PS1_Shader.gdshader" id="7_d2wvv"]
 [ext_resource type="AudioStream" uid="uid://cgaqcs1i3y3vf" path="res://assets/music/flashlight.mp3" id="7_ur7pv"]
 [ext_resource type="AudioStream" uid="uid://b02aem1uockth" path="res://assets/music/Floor/Steps_floor-001.ogg" id="8_y4r1p"]
 [ext_resource type="AudioStream" uid="uid://dj5eimw866lkn" path="res://assets/music/Floor/sfx-voice-breath9.mp3" id="9_ur7pv"]
@@ -16,19 +17,35 @@ script = ExtResource("5_jej6c")
 metadata/_custom_type_script = "uid://cw1cxd5h4vkgw"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
-radius = 0.8
+radius = 0.25
+height = 1.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g2els"]
+radius = 0.25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqkch"]
 albedo_texture = ExtResource("2_qhqgy")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2wvv"]
+render_priority = 0
+shader = ExtResource("7_d2wvv")
+shader_parameter/pixel_size = 8.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_jej6c"]
+material = SubResource("ShaderMaterial_d2wvv")
+flip_faces = true
+size = Vector2(2, 2)
+subdivide_width = 32
+subdivide_depth = 32
+
 [node name="Player" type="CharacterBody3D" unique_id=2113815111 groups=["interactible", "player"]]
 collision_mask = 14
+floor_stop_on_slope = false
 script = ExtResource("1_g2els")
 inv = SubResource("Resource_f1ej7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1477643939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("CapsuleShape3D_3vyb7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1188758638]
@@ -45,23 +62,28 @@ shape = SubResource("CapsuleShape3D_3vyb7")
 [node name="Inv_UI" parent="." unique_id=61950315 instance=ExtResource("4_dqkch")]
 
 [node name="Head" type="Node3D" parent="." unique_id=1036463668 groups=["interactible"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81827354, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4818557, 0)
 script = ExtResource("2_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=2135501034]
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D" unique_id=1316335211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3593932)
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_jej6c")
+
 [node name="Flashlight" type="SpotLight3D" parent="Head" unique_id=2128439450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.050967813, 0)
-visible = false
-light_color = Color(0.9019608, 0.87058824, 0.6627451, 1)
-light_energy = 0.3
-light_volumetric_fog_energy = 0.1
-light_size = 1.402
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12915587)
+light_color = Color(0.87267923, 0.8760432, 0.72137827, 1)
+light_volumetric_fog_energy = 0.203
+light_size = 0.497
+light_specular = 0.397
+light_cull_mask = 4294967289
 shadow_enabled = true
 spot_range = 10.0
-spot_attenuation = -3.26
-spot_angle = 16.65376
-spot_angle_attenuation = 3.6050012
+spot_attenuation = 2.16
+spot_angle = 31.53
+spot_angle_attenuation = 3.363586
 
 [node name="InteractRay" type="RayCast3D" parent="Head" unique_id=1317922755]
 transform = Transform3D(1.7494013, 0, 0, 0, -1.6872632e-07, -1.7494011, 0, 3.860008, -7.646875e-08, 0, 0, 0)

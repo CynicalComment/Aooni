@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cv71wrhwd6hu2"]
+
+[ext_resource type="Texture2D" uid="uid://c7ctggqsw2rut" path="res://assets/- Classic 64 Asset Pack 0.6/Tiles/Materials/tile_clean_tan.png" id="1_g0nqs"]
+[ext_resource type="Texture2D" uid="uid://m627gm5vbqq3" path="res://assets/- Classic 64 Asset Pack 0.6/Tiles/Materials/tiles_vintage.jpg" id="2_yo8t0"]
+
+[resource]
+albedo_color = Color(0.9665697, 0.9645609, 0.86024696, 1)
+albedo_texture = ExtResource("1_g0nqs")
+metallic = 0.1
+roughness_texture = ExtResource("2_yo8t0")
+emission = Color(0.78344375, 0.7453656, 0.8046221, 1)
+emission_energy_multiplier = 0.09
+uv1_triplanar = true

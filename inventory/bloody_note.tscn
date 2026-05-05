@@ -2,28 +2,46 @@
 
 [ext_resource type="Script" uid="uid://cd4b7jkr6ualp" path="res://scripts/bloody_note.gd" id="1_a5m41"]
 [ext_resource type="Resource" uid="uid://dt4cv0vonnwvb" path="res://inventory/items/BloodyNote.tres" id="2_58roy"]
-[ext_resource type="Texture2D" uid="uid://eqnst805dugl" path="res://inventory/item_art/BloodyNote.png" id="3_3xf7h"]
+[ext_resource type="Shader" uid="uid://bkv031c3khnyd" path="res://materials/ItemHighlighterShader.gdshader" id="3_58roy"]
+[ext_resource type="Texture2D" uid="uid://b3riw5hu5knf7" path="res://materials/BlueKey1.png" id="3_a5m41"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocnr8"]
-albedo_texture = ExtResource("3_3xf7h")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3xf7h"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("3_58roy")
+shader_parameter/shine_color = Color(0.50298446, 0.49695122, 5.7756904e-07, 1)
+shader_parameter/cycle_interval = 5.0
+shader_parameter/shine_speed = 1.0
+shader_parameter/shine_width = 15.18000067355
 
-[sub_resource type="BoxMesh" id="BoxMesh_s7831"]
-material = SubResource("StandardMaterial3D_ocnr8")
-size = Vector3(0.4, 0.001, 0.2)
+[sub_resource type="BoxMesh" id="BoxMesh_ocnr8"]
+material = SubResource("ShaderMaterial_3xf7h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7831"]
+albedo_texture = ExtResource("3_a5m41")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0f86i"]
+material = SubResource("StandardMaterial3D_s7831")
+size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0f86i"]
-size = Vector3(0.4, 0.001, 0.2)
 
-[node name="BloodyNote" type="StaticBody3D" unique_id=461936748]
+[node name="Key" type="StaticBody3D" unique_id=461936748]
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_a5m41")
 item = ExtResource("2_58roy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=636937215]
-mesh = SubResource("BoxMesh_s7831")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_ocnr8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=647645930]
+mesh = SubResource("BoxMesh_0f86i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=658349543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01945801, 0, 0)
 shape = SubResource("BoxShape3D_0f86i")
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]

@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dbgceayw5477n" path="res://scenes/door.tscn" id="7_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://bq6aalf0g6x1k" path="res://scenes/light_switch.tscn" id="8_choun"]
 [ext_resource type="PackedScene" uid="uid://dvjaew0rx5n4t" path="res://scenes/button.tscn" id="9_ya4ey"]
-[ext_resource type="PackedScene" uid="uid://dlb45l0xqyxqy" path="res://inventory/bloody_note.tscn" id="10_choun"]
-[ext_resource type="Resource" uid="uid://c56r6s8n2yo2y" path="res://inventory/items/frogairpods.tres" id="11_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://b8ilkgjn6bohu" path="res://assets/- Classic 64 Asset Pack 0.6/Roof/Materials/shingles_wood_02.jpg" id="12_trceg"]
 [ext_resource type="Texture2D" uid="uid://c6x5dau8j20m0" path="res://assets/- Classic 64 Asset Pack 0.6/Roof/Materials/shingles_02.jpg" id="13_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://6ej5xs86o8q4" path="res://scenes/CSGROOM.tscn" id="14_a8y0u"]
+[ext_resource type="VoxelGIData" uid="uid://31lr6qeq0qhx" path="res://lighting/main.VoxelGI_data.res" id="15_jkv2x"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_tbgi4"]
 vertices = PackedVector3Array(38.958263, 6.299, -12.082535, 39.708263, 6.299, -11.082535, 40.708263, 6.299, -11.082535, 40.708263, 6.299, -23.832535, 30.958263, 6.299, -23.582535, 30.958263, 6.299, -12.082535, -28.291737, 0.6989999, 21.667465, -28.791737, 0.6989999, 21.917465, -28.791737, 0.6989999, 25.417465, 15.458263, 0.6989999, 25.417465, 14.208263, 0.6989999, 5.417465, 13.958263, 0.6989999, 3.9174652, 15.458263, 0.6989999, 6.167465, 14.208263, 0.6989999, -23.582535, -28.291737, 0.6989999, -23.582535, 16.958263, 0.6989999, -18.582535, 18.208263, 0.6989999, -18.582535, 18.208263, 0.6989999, -19.332535, 19.458263, 0.6989999, -20.332535, 16.958263, 0.6989999, -23.332535, 20.958263, 0.6989999, -20.082535, 25.958263, 0.6989999, -18.582535, 25.958263, 0.6989999, -23.332535, 21.708263, 0.6989999, -19.332535, 21.708263, 0.6989999, -18.582535, 19.708263, 6.299, -9.332535, 19.958263, 6.299, -8.582535, 20.458263, 6.299, -9.082535, 20.458263, 6.299, -10.082535, 22.208263, 6.299, -9.082535, 16.958263, 6.299, -9.082535, 18.458263, 6.299, -9.332535, 17.708263, 6.299, -10.082535, 19.708263, 6.299, -12.082535, 20.458263, 6.299, -17.082535, 19.458263, 6.299, -17.082535, 18.458263, 6.299, -12.082535, 22.208263, 6.299, -11.332535, 20.458263, 6.299, -11.332535, 18.208263, 6.299, -18.082535, 18.208263, 6.299, -19.332535, 16.958263, 6.299, -23.332535, 17.708263, 6.299, -11.332535, 23.208263, 6.299, -12.082535, 21.458263, 6.299, -17.832535, 18.958263, 6.299, -20.082535, 20.208263, 6.299, -20.332535, 20.208263, 6.299, -23.332535, 21.708263, 6.299, -19.332535, 28.208263, 6.299, -18.332535, 27.958263, 6.299, -23.332535, 21.708263, 6.299, -18.332535, 19.458263, 0.6989999, -8.082535, 19.708263, 0.6989999, -8.082535, 20.458263, 0.6989999, -9.082535, 18.458263, 0.6989999, -9.332535, 22.208263, 0.6989999, -11.332535, 22.958263, 0.6989999, -12.082535, 19.458263, 0.6989999, -17.082535, 16.958263, 0.6989999, -9.082535, 22.208263, 0.6989999, -9.082535, 20.958263, 0.6989999, -17.332535, 25.958263, 0.6989999, -12.082535, 27.208263, 6.299, -12.082535, 28.208263, 6.299, -13.082535, 19.458263, 6.299, -8.332535, 16.958263, 6.299, 0.4174652, 17.208263, 6.299, 0.4174652, 18.458263, 6.299, -1.5825348, 18.708263, 6.299, -6.832535, 16.958263, 6.299, -6.832535, 19.708263, 6.299, -7.582535, 19.458263, 6.299, -7.582535, 20.708263, 6.299, -1.3325348, 22.208263, 6.299, -1.3325348, 22.208263, 6.299, -6.832535, 20.458263, 6.299, -6.832535, 24.958263, 0.6989999, 3.1674652, 28.708263, 0.6989999, 3.4174652, 28.708263, 0.6989999, -9.332535, 24.958263, 0.6989999, -9.332535, 18.708263, 0.6989999, -6.832535, 20.458263, 0.6989999, 0.9174652, 20.458263, 0.6989999, -6.832535, 22.208263, 0.6989999, 0.9174652, 22.208263, 0.6989999, -6.832535, 18.708263, 0.6989999, 1.1674652, 19.208263, 0.6989999, 1.9174652, 16.958263, 0.6989999, 1.1674652, 16.958263, 0.6989999, -6.832535, 21.458263, 6.299, -0.3325348, 17.458263, 6.299, 1.6674652, 16.958263, 6.299, 3.4174652, 22.208263, 6.299, 3.4174652, 21.458263, 6.299, 1.6674652, 20.208263, 6.299, 2.6674652, 18.458263, 6.299, 2.6674652, 24.958263, 0.6989999, 4.667465, 24.208263, 0.6989999, 5.417465, 28.708263, 0.6989999, 25.417465, 22.958263, 0.6989999, 5.417465, 22.208263, 0.6989999, 4.167465, 17.458263, 0.6989999, 4.417465, 16.208263, 0.6989999, 6.167465)
@@ -64,7 +64,7 @@ script = ExtResource("1_sugp2")
 
 [node name="Player" parent="." unique_id=2113815111 instance=ExtResource("1_o5qli")]
 process_mode = 1
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.15045, 1.8178196, -19.186962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.34955, 11.81782, -4.186962)
 inv = ExtResource("4_ya4ey")
 
 [node name="UserInterface" parent="." unique_id=537759978 instance=ExtResource("4_o6xl0")]
@@ -77,7 +77,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.14
 navigation_mesh = SubResource("NavigationMesh_tbgi4")
 
 [node name="Enemy" parent="Environment/NavigationRegion3D" unique_id=1881498892 instance=ExtResource("6_tefeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.427032, 0.74818516, 0.56839514)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5729675, 0.74818516, 14.068394)
 chase_timer_MAX = 3
 player_path = NodePath("../../../Player")
 
@@ -1227,16 +1227,6 @@ sky_mode = 1
 
 [node name="Enemies" type="Node" parent="." unique_id=1813713851]
 
-[node name="BloodyNote" parent="." unique_id=461936748 instance=ExtResource("10_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1.1179655, -18.296057)
-
-[node name="BloodyNote2" parent="." unique_id=1772351682 instance=ExtResource("10_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.324688, 1.1179655, -2.296057)
-
-[node name="BloodyNote3" parent="." unique_id=1682771923 instance=ExtResource("10_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.576312, 1.1179655, -2.296057)
-item = ExtResource("11_ya4ey")
-
 [node name="light_switch" parent="." unique_id=604630940 instance=ExtResource("8_choun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, 5.3885865, -14.237604)
 
@@ -1405,6 +1395,14 @@ material = SubResource("StandardMaterial3D_jbj1t")
 [node name="CSGBox3D5" type="CSGBox3D" parent="housefolder" unique_id=677787922]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 51.25, 14, 268)
 size = Vector3(24, 27, 56.5)
+
+[node name="CSGROOM" parent="." unique_id=211361704 instance=ExtResource("14_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.75, 13.25, -3)
+
+[node name="VoxelGI" type="VoxelGI" parent="." unique_id=1726534193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.25, 13.5, -12.5)
+size = Vector3(15.5, 7, 20)
+data = ExtResource("15_jkv2x")
 
 [connection signal="interacted" from="Button" to="light_switch" method="_on_button_interacted"]
 [connection signal="interacted" from="Button" to="light_switch2" method="_on_button_interacted"]
