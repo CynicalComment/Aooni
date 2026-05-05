@@ -77,7 +77,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.14
 navigation_mesh = SubResource("NavigationMesh_tbgi4")
 
 [node name="Enemy" parent="Environment/NavigationRegion3D" unique_id=1881498892 instance=ExtResource("6_tefeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.927032, 10.248185, 8.068395)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.427032, 10.248185, 8.068395)
 chase_timer_MAX = 3
 player_path = NodePath("../../../Player")
 
